@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proyecto.Menu">
+    <ContentPage.Content>
+<!-- Lexus,kia, Hyundai, Honda,etc  -->
+        <StackLayout>
+            <Label Text="Marcas disponibles" FontSize="45" FontFamily="Arial" HorizontalTextAlignment="Center"/>
+
+                <RelativeLayout HorizontalOptions="FillAndExpand">
+                <Button Text="Toyota" RelativeLayout.XConstraint="{ConstraintExpression 
+            Type=RelativeToParent,Property=Width,Factor=.0000,Constant=0}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+            Property=Width,Factor=.3333,Constant=0}" x:Name="btnToyotaCatalogo"/>
+                <Button Text="Ford" RelativeLayout.XConstraint="{ConstraintExpression
+            Type=RelativeToParent,Property=Width,Factor=.3333,Constant=0}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+            Property=Width,Factor=.3333,Constant=0}" x:Name="btnFordCatalogo"/>
+                <Button Text="Nissan" RelativeLayout.XConstraint="{ConstraintExpression 
+            Type=RelativeToParent,Property=Width,Factor=.0000,Constant=0}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+            Property=Width,Factor=.3333,Constant=0}" x:Name="btnNissanCatalago"/>
+            </RelativeLayout>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

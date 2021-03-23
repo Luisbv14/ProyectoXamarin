@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proyecto.Transaccion">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Metodo de pago" FontSize="45" FontFamily="Arial" HorizontalTextAlignment="Center"/>
+            <Picker x:Name="pickerTipoTarjeta" Title="Tipos de tarjetas">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>American Express</x:String>
+                        <x:String>MasterCard</x:String>
+                        <x:String>Visa</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            
+            
+            <Entry Keyboard="Numeric" Placeholder="Numero de tarjeta" x:Name="numeroTarjeta"/>
+            
+            <Picker x:Name="MesEX" Title="---">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>01</x:String>
+                        <x:String>02</x:String>
+                        <x:String>03</x:String>
+                        <x:String>04</x:String>
+                        <x:String>05</x:String>
+                        <x:String>06</x:String>
+                        <x:String>07</x:String>
+                        <x:String>08</x:String>
+                        <x:String>09</x:String>
+                        <x:String>10</x:String>
+                        <x:String>11</x:String>
+                        <x:String>12</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+    
+            <Picker x:Name="YearEX" Title="---">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>2021</x:String>
+                        <x:String>2022</x:String>
+                        <x:String>2023</x:String>
+                        <x:String>2024</x:String>
+                        <x:String>2025</x:String>
+                        <x:String>2026</x:String>
+                        <x:String>2027</x:String>
+                        <x:String>2028</x:String>
+                        <x:String>2029</x:String>
+                        <x:String>2030</x:String>
+                        <x:String>2031</x:String>
+                        <x:String>2032</x:String>
+                        <x:String>2033</x:String>
+                        <x:String>2034</x:String>
+                        <x:String>2035</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Entry Placeholder="Titular de la tarjeta" x:Name="TitularTarjeta"/>
+            <Entry Keyboard="Numeric" Placeholder="Numero de telefono nacional"/>
+
+            <RelativeLayout HorizontalOptions="FillAndExpand">
+                <Button Text="Regresar" RelativeLayout.XConstraint="{ConstraintExpression 
+            Type=RelativeToParent,Property=Width,Factor=.0000,Constant=0}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+            Property=Width,Factor=.3333,Constant=0}" x:Name="btnRegresarMenuModelos"/>
+                <Button Text="Comprar" RelativeLayout.XConstraint="{ConstraintExpression
+            Type=RelativeToParent,Property=Width,Factor=.3333,Constant=0}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+            Property=Width,Factor=.3333,Constant=0}" x:Name="btnComprar"/>
+            </RelativeLayout>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
