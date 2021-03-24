@@ -5,23 +5,18 @@
     <ContentPage.Content>
 <!-- Lexus,kia, Hyundai, Honda,etc  -->
         <StackLayout>
+            <Image Grid.Column="0" Source="LogoAutoFast.png" WidthRequest="245" HeightRequest="245" Margin="0,50,0,0"/>
             <Label Text="Marcas disponibles" FontSize="45" FontFamily="Arial" HorizontalTextAlignment="Center"/>
 
-                <RelativeLayout HorizontalOptions="FillAndExpand">
-                <Button Text="Toyota" RelativeLayout.XConstraint="{ConstraintExpression 
-            Type=RelativeToParent,Property=Width,Factor=.0000,Constant=0}"
-            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
-            Property=Width,Factor=.3333,Constant=0}" x:Name="btnToyotaCatalogo"/>
-                <Button Text="Ford" RelativeLayout.XConstraint="{ConstraintExpression
-            Type=RelativeToParent,Property=Width,Factor=.3333,Constant=0}"
-            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
-            Property=Width,Factor=.3333,Constant=0}" x:Name="btnFordCatalogo"/>
-                <Button Text="Nissan" RelativeLayout.XConstraint="{ConstraintExpression 
-            Type=RelativeToParent,Property=Width,Factor=.0000,Constant=0}"
-            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
-            Property=Width,Factor=.3333,Constant=0}" x:Name="btnNissanCatalago"/>
-            </RelativeLayout>
-            
+            <Grid 
+             ColumnDefinitions="33.33*, 33.33*, 33.33*"
+             ColumnSpacing="8" 
+             HorizontalOptions="FillAndExpand">
+                <Button BackgroundColor="White" Grid.Column="0" HorizontalOptions="FillAndExpand"  ImageSource="https://cdn.discordapp.com/attachments/730938576560193607/824399959695949824/Honda400x400.png"/>
+                <Button Text="" Grid.Column="1" HorizontalOptions="FillAndExpand" ImageSource="https://cdn.discordapp.com/attachments/730938576560193607/824400505438208020/Nissan400x400.png"/>
+                <Button Text="" Grid.Column="2" HorizontalOptions="FillAndExpand" ImageSource="https://cdn.discordapp.com/attachments/730938576560193607/824400529820090419/Ford400x400.png" />
+            </Grid>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
