@@ -6,7 +6,7 @@
 
     <StackLayout>
 
-        <Image Source="https://cdn.discordapp.com/attachments/730938576560193607/824376824880037898/AutoFastCoralBackSmall.png"/>
+        <Image Source="AutoFastCoralBack.png"/>
         <Button Text="Bienvenido" x:Name="BtnBienvenida" CornerRadius="60"/>
     </StackLayout>
 
