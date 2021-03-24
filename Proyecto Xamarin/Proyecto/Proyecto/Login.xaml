@@ -1,22 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Proyecto.Login">
+             x:Class="Proyecto.Login"
+             BackgroundColor="White">
     <ContentPage.Content>
         <StackLayout>
-            <Entry Placeholder="Usuario" x:Name="txtUsuario"/>
-            <Entry Placeholder="Contraseña" IsPassword="true" x:Name="txtPassword"/>
-            <RelativeLayout HorizontalOptions="FillAndExpand">
-                <Button Text="Login" RelativeLayout.XConstraint="{ConstraintExpression 
-            Type=RelativeToParent,Property=Width,Factor=.0000,Constant=0}"
-            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
-            Property=Width,Factor=.3333,Constant=0}" x:Name="btnLogin"/>
-                <Button Text="Sign Up" RelativeLayout.XConstraint="{ConstraintExpression
-            Type=RelativeToParent,Property=Width,Factor=.3333,Constant=0}"
-            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
-            Property=Width,Factor=.3333,Constant=0}" x:Name="btnRegistrar"/>
-                
-            </RelativeLayout>
+            <Grid>
+                <Image Source="FondoAutoFast.jpg" Aspect="AspectFill"/>
+                <BoxView Color="Gray" Opacity="0.3"/>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <StackLayout Grid.Row="1" Padding="10,20">
+                        <Image Grid.Column="0" Source="Fondo_AutoFast.png" WidthRequest="150" HeightRequest="150" Margin="0,50,0,0"/>
+                        <Entry Placeholder="Correo Electronico" PlaceholderColor="#D60000" x:Name="usr"/>
+                        <Entry Placeholder="Contraseña" PlaceholderColor="#D60000" IsPassword="False" x:Name="psw"/>
+                        <Button Text="Iniciar Sesion" BackgroundColor="Goldenrod" TextColor="Black" BorderRadius="20" x:Name="btnLogin"/>
+                        <Button Text="Registrarse" BackgroundColor="Goldenrod" TextColor="Black" BorderRadius="20" x:Name="btnRegistrar"/>
+                    </StackLayout>
+                </Grid>
+            </Grid>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

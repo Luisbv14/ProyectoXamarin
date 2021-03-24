@@ -22,8 +22,8 @@ namespace Proyecto
         private void BtnRegistrar_Clicked(object sender, EventArgs e)
         {
             ((NavigationPage)this.Parent).PushAsync(new Registro());
-
         }
+
 
         private void BtnLogin_Clicked(object sender, EventArgs e)
         {
