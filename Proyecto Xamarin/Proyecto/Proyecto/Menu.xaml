@@ -12,9 +12,18 @@
              ColumnDefinitions="33.33*, 33.33*, 33.33*"
              ColumnSpacing="8" 
              HorizontalOptions="FillAndExpand">
-                <Button BackgroundColor="White" Grid.Column="0" HorizontalOptions="FillAndExpand"  ImageSource="https://cdn.discordapp.com/attachments/730938576560193607/824399959695949824/Honda400x400.png"/>
-                <Button Text="" Grid.Column="1" HorizontalOptions="FillAndExpand" ImageSource="https://cdn.discordapp.com/attachments/730938576560193607/824400505438208020/Nissan400x400.png"/>
-                <Button Text="" Grid.Column="2" HorizontalOptions="FillAndExpand" ImageSource="https://cdn.discordapp.com/attachments/730938576560193607/824400529820090419/Ford400x400.png" />
+                <Button BackgroundColor="White" Grid.Column="0" HorizontalOptions="FillAndExpand"  ImageSource="https://cdn.discordapp.com/attachments/730938576560193607/824399959695949824/Honda400x400.png" x:Name="BtnModelosHonda"/>
+                <Button BackgroundColor="White" Grid.Column="1" HorizontalOptions="FillAndExpand" ImageSource="https://cdn.discordapp.com/attachments/730938576560193607/824400505438208020/Nissan400x400.png"  x:Name="BtnModelosToyota"/>
+                <Button BackgroundColor="White" Grid.Column="2" HorizontalOptions="FillAndExpand" ImageSource="https://cdn.discordapp.com/attachments/730938576560193607/824400529820090419/Ford400x400.png"   x:Name="BtnModelosFord"/>
+            </Grid>
+
+            <Grid 
+             ColumnDefinitions="33.33*, 33.33*, 33.33*"
+             ColumnSpacing="8" 
+             HorizontalOptions="FillAndExpand">
+                <Button BackgroundColor="White" Grid.Column="0" HorizontalOptions="FillAndExpand"  ImageSource="https://cdn.discordapp.com/attachments/730938576560193607/824399959695949824/Honda400x400.png"  x:Name="BtnModelosNissan"/>
+                <Button BackgroundColor="White" Grid.Column="1" HorizontalOptions="FillAndExpand" ImageSource="https://cdn.discordapp.com/attachments/730938576560193607/824399959695949824/Honda400x400.png" x:Name="BtnModelosLexus"/>
+                <Button BackgroundColor="White" Grid.Column="2" HorizontalOptions="FillAndExpand" ImageSource="https://cdn.discordapp.com/attachments/730938576560193607/824399959695949824/Honda400x400.png"  x:Name="BtnModelos"/>
             </Grid>
 
         </StackLayout>

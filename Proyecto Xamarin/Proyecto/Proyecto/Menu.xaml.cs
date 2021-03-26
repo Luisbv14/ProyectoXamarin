@@ -15,6 +15,12 @@ namespace Proyecto
         public Menu()
         {
             InitializeComponent();
+            BtnModelosToyota.Clicked += BtnModelosToyota_Clicked;
+        }
+
+        private void BtnModelosToyota_Clicked(object sender, EventArgs e)
+        {
+            ((NavigationPage)this.Parent).PushAsync(new MenuModelos());
         }
     }
 }

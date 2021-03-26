@@ -10,17 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace Proyecto
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MenuModelos : ContentPage
+    public partial class BancoPrima : ContentPage
     {
-        public MenuModelos()
+        public BancoPrima()
         {
             InitializeComponent();
-            BtnOpcion1.Clicked += BtnOpcion1_Clicked;
-        }
-
-        private void BtnOpcion1_Clicked(object sender, EventArgs e)
-        {
-            ((NavigationPage)this.Parent).PushAsync(new BancoPrima());
         }
     }
 }
