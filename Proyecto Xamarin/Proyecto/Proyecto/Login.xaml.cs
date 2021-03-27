@@ -27,6 +27,14 @@ namespace Proyecto
 
         private void BtnLogin_Clicked(object sender, EventArgs e)
         {
+            /*if (!(App.listaUsuarios.Find(i => i.username == usr.Text) == null && App.listaUsuarios.Find(i => i.contraseña == psw.Text) == null))
+            {
+                DisplayAlert("Advertencia", "El usuario no existe en la base de datos, por favor, registrese", "Ok");
+            }
+            else
+            {
+                ((NavigationPage)this.Parent).PushAsync(new Menu());
+            }*/
             ((NavigationPage)this.Parent).PushAsync(new Menu());
         }
 

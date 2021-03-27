@@ -4,10 +4,10 @@
              x:Class="Proyecto.Registro">
     <ContentPage.Content>
         <StackLayout>
-            <Entry Text="Usuario" x:Name="txtUsuario"/>
-            <Entry Text="Contraseña" x:Name="txtPassword" IsPassword="True"/>
-            <Entry Text="Repetir Contraseña" x:Name="txtPaswordConfirm" IsPassword="True"/>
-            <Entry Text="Correo Electronico" x:Name="txtCorreo"/>
+            <Entry Placeholder="Usuario" x:Name="txtUsuario"/>
+            <Entry Placeholder="Contraseña" x:Name="txtPassword" IsPassword="True"/>
+            <Entry Placeholder="Repetir Contraseña" x:Name="txtPaswordConfirm" IsPassword="True"/>
+            <Entry Placeholder="Correo Electronico" x:Name="txtCorreo"/>
             
             <RelativeLayout HorizontalOptions="FillAndExpand">
                 <Button Text="Registrar" RelativeLayout.XConstraint="{ConstraintExpression 
