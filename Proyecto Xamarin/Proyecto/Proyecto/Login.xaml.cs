@@ -27,15 +27,17 @@ namespace Proyecto
 
         private void BtnLogin_Clicked(object sender, EventArgs e)
         {
-            /*if (!(App.listaUsuarios.Find(i => i.username == usr.Text) == null && App.listaUsuarios.Find(i => i.contraseña == psw.Text) == null))
+            if (!(App.listaUsuarios.Find(i => i.username == usr.Text) == null && App.listaUsuarios.Find(i => i.contraseña == psw.Text) == null))
             {
+                usr.Text = "";
+                psw.Text = "";
+
                 DisplayAlert("Advertencia", "El usuario no existe en la base de datos, por favor, registrese", "Ok");
             }
             else
             {
                 ((NavigationPage)this.Parent).PushAsync(new Menu());
-            }*/
-            ((NavigationPage)this.Parent).PushAsync(new Menu());
+            }
         }
 
         /*Copiar y pegar en BtnLogin_Clicked para confirmar si contraseña encriptada = contraseña ingresada, cuando la ruta de BD ya esté definida

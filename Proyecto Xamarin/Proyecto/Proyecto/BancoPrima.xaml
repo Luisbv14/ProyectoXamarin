@@ -1,11 +1,48 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Proyecto.BancoPrima">
+             x:Class="Proyecto.BancoPrima"
+             >
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Tasa Fija #%" x:Name="lblTasa"/>
-            <Entry Placeholder="" Text="" x:Name="EntryPrima"/>
+
+            <!--<Image Source="FondoAutoFastAlterno.png" Aspect="AspectFit" />-->
+
+            <Image Grid.Column="0" Source="LogoAutoFast.png" WidthRequest="240" HeightRequest="240" Margin="0,50,0,0"/>
+
+            <!-- Picker for the amount of car press porcentage -->
+
+            <Label Text="Seleción del Porcentaje de Prima" TextColor="Goldenrod" FontSize="25"/>
+
+            <Picker x:Name="Prima" Title="Procentaje de Prima">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>10%</x:String>
+                        <x:String>15%</x:String>
+                        <x:String>20%</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Entry Text="Monto de la prima" IsEnabled="False"/>
+            <!-- End of the picker for the amount of car press porcentage -->
+            
+            <!-- Picker for the bank and % of interest -->
+
+            <Label Text="Seleción del Banco" TextColor="Goldenrod" FontSize="25"/>
+
+            <Picker x:Name="Intereses" Title="Procentaje de Intereses" HorizontalOptions="Center">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>BN</x:String>
+                        <x:String>BCR</x:String>
+                        <x:String>BAC</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            
+            <Entry Text="Procentaje de intereses" IsEnabled="False"/>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

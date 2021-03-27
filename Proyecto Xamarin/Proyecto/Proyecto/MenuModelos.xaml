@@ -4,7 +4,7 @@
              x:Class="Proyecto.MenuModelos">
     <ContentPage.Content>
         
-        <StackLayout>
+        <StackLayout Background="#d9d9d9">
             <Image Grid.Column="0" Source="LogoAutoFast.png" WidthRequest="245" HeightRequest="245" Margin="0,50,0,0"/>
             <Label Text="Modelos disponibles" FontSize="45" FontFamily="Arial" HorizontalTextAlignment="Center"/>
             
@@ -13,7 +13,6 @@
              ColumnSpacing="8" 
              HorizontalOptions="FillAndExpand">
                 <Button BackgroundColor="White" Grid.Column="0" HorizontalOptions="FillAndExpand"  ImageSource="" x:Name="BtnOpcion1"/>
-
             </Grid>
             
         </StackLayout>
