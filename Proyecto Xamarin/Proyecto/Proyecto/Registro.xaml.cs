@@ -32,15 +32,49 @@ namespace Proyecto
                 DisplayAlert("Advertencia", "Debe llenar todos los campos", "Ok");
             } else
             {
-                //verifica si los datos colocados coinciden con los guardados en la lista
-                if (!(txtPassword.Text == txtPaswordConfirm.Text)){
+                //verifica si los datos de la contraseña colocados coinciden con los guardados en la lista
+                if (txtPassword.Text != txtPaswordConfirm.Text)
+                {
                     DisplayAlert("Advertencia", "Las contraseñas deben de coincidir", "Ok");
-                } else if (!(App.listaUsuarios.Find(i => i.username == txtUsuario.Text) == null && App.listaUsuarios.Find(i => i.correo == txtCorreo.Text) == null)) {
-                    DisplayAlert("Advertencia", "Los datos del usuario y el correo ya coinciden con la base de datos, por favor, inicie sesión", "Ok");
-                } else
+                }
+
+                //variables para saber si los datos estan en la base
+                bool userFound = false;
+                bool emailFound = false;
+
+                //revisa cada objeto de la lista para saber si el usuario y la contraseña ya existen en la base de datos
+                foreach (Usuario user in App.listaUsuarios) {
+                    if (user.username == txtUsuario.Text)
+                    {
+                        userFound = true;
+                        DisplayAlert("Advertencia", "El usuario ya existe en la base de datos", "Ok");
+                        break;
+                    } else if(user.correo == txtCorreo.Text)
+                    {
+                        emailFound = true;
+                        DisplayAlert("Advertencia", "El correo ya existe en la base de datos", "Ok");
+                        break;
+                    }
+                }
+
+                //verifica si los datos no fueron encontrados en la base de datos, en caso de ser así, lo agrega a la base
+                if (emailFound is false && userFound is false)
                 {
                     App.listaUsuarios.Add(new Usuario(txtUsuario.Text, txtPassword.Text, txtCorreo.Text));
                     DisplayAlert("Advertencia", "Usuario " + txtUsuario.Text + " agregado a la base de datos", "Ok");
+                }
+
+                //limpia los entrys
+                txtUsuario.Text = "";
+                txtPassword.Text = "";
+                txtPaswordConfirm.Text = "";
+                txtCorreo.Text = "";
+
+                //imprime cada uno de los objetos de la lista
+                foreach (Usuario user in App.listaUsuarios)
+                {
+                    Console.WriteLine(user.username);
+                    Console.WriteLine(user.contraseña);
                 }
             }
         }
