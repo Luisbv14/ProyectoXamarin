@@ -15,7 +15,7 @@
 
             <StackLayout Grid.Row="1" Padding="10,20">
                 <Image Grid.Column="0" Source="LogoAutoFast.png" WidthRequest="150" HeightRequest="150" Margin="0,50,0,0"/>
-                <Entry Placeholder="Correo Electronico" PlaceholderColor="#D60000" x:Name="usr"/>
+                <Entry Placeholder="Usuario" PlaceholderColor="#D60000" x:Name="usr"/>
                 <Entry Placeholder="Contraseña" PlaceholderColor="#D60000" IsPassword="False" x:Name="psw"/>
                 <Button Text="Iniciar Sesion" BackgroundColor="Goldenrod" TextColor="Black" BorderRadius="20" x:Name="btnLogin"/>
                 <Button Text="Registrarse" BackgroundColor="Goldenrod" TextColor="Black" BorderRadius="20" x:Name="btnRegistrar"/>

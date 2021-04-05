@@ -47,6 +47,8 @@ namespace Proyecto
                     userFound = true;
                     pswFound = true;
                     //DisplayAlert("Advertencia", "El usuario ya existe en la base de datos", "Ok");
+                    //Console.WriteLine(user.username);
+                    //Console.WriteLine(user.contraseña);
                     break;
                 }
             }
@@ -66,6 +68,8 @@ namespace Proyecto
             } else
             {
                 DisplayAlert("Advertencia", "El usuario no existe en la base de datos", "Ok");
+                //Console.WriteLine("userfound: " + userFound);
+                //Console.WriteLine("pswfound: " + pswFound);
             }
 
         }
