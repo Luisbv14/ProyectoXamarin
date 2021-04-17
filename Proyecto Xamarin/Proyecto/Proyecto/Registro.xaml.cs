@@ -62,6 +62,7 @@ namespace Proyecto
                 {
                     App.listaUsuarios.Add(new Usuario(txtUsuario.Text, txtPassword.Text, txtCorreo.Text));
                     DisplayAlert("Advertencia", "Usuario " + txtUsuario.Text + " agregado a la base de datos", "Ok");
+                    ((NavigationPage)this.Parent).PushAsync(new Login());
                 }
 
                 //limpia los entrys

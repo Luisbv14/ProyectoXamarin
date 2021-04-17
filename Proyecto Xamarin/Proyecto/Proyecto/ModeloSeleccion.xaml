@@ -2,7 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Proyecto.ModeloSeleccion"
-              BackgroundColor = "#ff5757">
+              BackgroundColor = "#ff5757"
+             NavigationPage.HasNavigationBar="False">
+    
     <ContentPage.Content>
         <StackLayout BackgroundColor="#d9d9d9">
             <Image Grid.Column="0" Source="LogoAutoFast.png" WidthRequest="245" HeightRequest="245" Margin="0,50,0,0"/>

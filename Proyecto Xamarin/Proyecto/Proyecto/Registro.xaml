@@ -1,24 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Proyecto.Registro">
+             x:Class="Proyecto.Registro"
+              BackgroundColor = "#d9d9d9"
+             NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
+
         <StackLayout>
-            <Entry Placeholder="Usuario" x:Name="txtUsuario"/>
-            <Entry Placeholder="Contraseña" x:Name="txtPassword" IsPassword="True"/>
-            <Entry Placeholder="Repetir Contraseña" x:Name="txtPaswordConfirm" IsPassword="True"/>
-            <Entry Placeholder="Correo Electronico" x:Name="txtCorreo"/>
-            
-            <RelativeLayout HorizontalOptions="FillAndExpand">
-                <Button Text="Registrar" RelativeLayout.XConstraint="{ConstraintExpression 
-            Type=RelativeToParent,Property=Width,Factor=.0000,Constant=0}"
-            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
-            Property=Width,Factor=.3333,Constant=0}" x:Name="btnVerificarRegistro"/>
-                <Button Text="Regresar" RelativeLayout.XConstraint="{ConstraintExpression
-            Type=RelativeToParent,Property=Width,Factor=.3333,Constant=0}"
-            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
-            Property=Width,Factor=.3333,Constant=0}" x:Name="btnRegresar"/>
-            </RelativeLayout>
+            <Image Grid.Column="0" Source="LogoAutoFast.png" WidthRequest="200" HeightRequest="200" Margin="0,50,0,0"/>
+
+            <Entry Placeholder="Usuario" x:Name="txtUsuario"  PlaceholderColor="#D60000"/>
+            <Entry Placeholder="Contraseña" x:Name="txtPassword" IsPassword="True"  PlaceholderColor="#D60000"/>
+            <Entry Placeholder="Repetir Contraseña" x:Name="txtPaswordConfirm" IsPassword="True"  PlaceholderColor="#D60000"/>
+            <Entry Placeholder="Correo Electronico" x:Name="txtCorreo"  PlaceholderColor="#D60000"/>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <Button Text="Registrar"  BackgroundColor="Goldenrod" WidthRequest="350" TextColor="Black" BorderRadius="20"  x:Name="btnVerificarRegistro"/>
+                <Button Text="Regresar"  BackgroundColor="Goldenrod" WidthRequest="350" TextColor="Black" BorderRadius="20"  x:Name="btnRegresar"/>
+            </StackLayout>
+
+           
+           
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
