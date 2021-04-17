@@ -13,8 +13,20 @@
              ColumnSpacing="8" 
              HorizontalOptions="FillAndExpand">
                 <Button BackgroundColor="White" Grid.Column="0" HorizontalOptions="FillAndExpand"  ImageSource="" x:Name="BtnOpcion1"/>
+                <Button BackgroundColor="White" Grid.Column="0" HorizontalOptions="FillAndExpand"  ImageSource="" x:Name="BtnOpcion2"/>
+                <Button BackgroundColor="White" Grid.Column="0" HorizontalOptions="FillAndExpand"  ImageSource="" x:Name="BtnOpcion3"/>
             </Grid>
-            
+
+            <Grid 
+             ColumnDefinitions="33.33*, 33.33*, 33.33*"
+             ColumnSpacing="8" 
+             HorizontalOptions="FillAndExpand">
+                <Button BackgroundColor="White" Grid.Column="0" HorizontalOptions="FillAndExpand"  ImageSource="" x:Name="BtnOpcion4"/>
+                <Button BackgroundColor="White" Grid.Column="0" HorizontalOptions="FillAndExpand"  ImageSource="" x:Name="BtnOpcion5"/>
+                <Button BackgroundColor="White" Grid.Column="0" HorizontalOptions="FillAndExpand"  ImageSource="" x:Name="BtnOpcion6"/>
+            </Grid>
+
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
