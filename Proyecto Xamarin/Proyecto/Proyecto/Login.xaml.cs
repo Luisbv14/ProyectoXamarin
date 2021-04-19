@@ -17,6 +17,12 @@ namespace Proyecto
             InitializeComponent();
             btnLogin.Clicked += BtnLogin_Clicked;
             btnRegistrar.Clicked += BtnRegistrar_Clicked;
+            btnVerBD.Clicked += BtnVerBD_Clicked;
+        }
+
+        private void BtnVerBD_Clicked(object sender, EventArgs e)
+        {
+            ((NavigationPage)this.Parent).PushAsync(new BD());
         }
 
         private void BtnRegistrar_Clicked(object sender, EventArgs e)

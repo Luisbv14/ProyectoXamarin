@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Proyecto.Model;
 
 namespace Proyecto
 {
@@ -38,12 +39,22 @@ namespace Proyecto
                     DisplayAlert("Advertencia", "Las contraseñas deben de coincidir", "Ok");
                 }
 
+                StatusMessage.Text = String.Empty; 
+                DBConfig.Instancia.AddNewUser(txtUsuario.Text, txtPassword.Text, txtCorreo.Text);
+                StatusMessage.Text = DBConfig.Instancia.EstadoMensajeUsuario; 
+
+
+
+
+
+
+
                 //variables para saber si los datos estan en la base
-                bool userFound = false;
-                bool emailFound = false;
+                //bool userFound = false;
+                //bool emailFound = false;
 
                 //revisa cada objeto de la lista para saber si el usuario y la contraseña ya existen en la base de datos
-                foreach (Usuario user in App.listaUsuarios) {
+               /*foreach (Usuario user in App.listaUsuarios) {
                     if (user.username == txtUsuario.Text)
                     {
                         userFound = true;
@@ -55,28 +66,28 @@ namespace Proyecto
                         DisplayAlert("Advertencia", "El correo ya existe en la base de datos", "Ok");
                         break;
                     }
-                }
+                }*/
 
                 //verifica si los datos no fueron encontrados en la base de datos, en caso de ser así, lo agrega a la base
-                if (emailFound is false && userFound is false)
+                /*if (emailFound is false && userFound is false)
                 {
                     App.listaUsuarios.Add(new Usuario(txtUsuario.Text, txtPassword.Text, txtCorreo.Text));
                     DisplayAlert("Advertencia", "Usuario " + txtUsuario.Text + " agregado a la base de datos", "Ok");
                     ((NavigationPage)this.Parent).PushAsync(new Login());
-                }
+                }*/
 
                 //limpia los entrys
-                txtUsuario.Text = "";
-                txtPassword.Text = "";
-                txtPaswordConfirm.Text = "";
-                txtCorreo.Text = "";
+                //txtUsuario.Text = "";
+                //txtPassword.Text = "";
+               // txtPaswordConfirm.Text = "";
+               // txtCorreo.Text = "";
 
                 //imprime cada uno de los objetos de la lista
-                foreach (Usuario user in App.listaUsuarios)
+                /*foreach (Usuario user in App.listaUsuarios)
                 {
                     Console.WriteLine(user.username);
                     Console.WriteLine(user.contraseña);
-                }
+                }*/
             }
         }
 

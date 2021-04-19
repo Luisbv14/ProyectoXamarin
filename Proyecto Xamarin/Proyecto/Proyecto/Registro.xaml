@@ -9,18 +9,20 @@
         <StackLayout>
             <Image Grid.Column="0" Source="LogoAutoFast.png" WidthRequest="200" HeightRequest="200" Margin="0,50,0,0"/>
 
-            <Entry Placeholder="Usuario" x:Name="txtUsuario"  PlaceholderColor="#D60000"/>
-            <Entry Placeholder="Contraseña" x:Name="txtPassword" IsPassword="True"  PlaceholderColor="#D60000"/>
+            <Entry Placeholder="Usuario" x:Name="txtUsuario"  PlaceholderColor="#D60000" />
+            <Entry Placeholder="Contraseña" x:Name="txtPassword" IsPassword="True"  PlaceholderColor="#D60000" />
             <Entry Placeholder="Repetir Contraseña" x:Name="txtPaswordConfirm" IsPassword="True"  PlaceholderColor="#D60000"/>
-            <Entry Placeholder="Correo Electronico" x:Name="txtCorreo"  PlaceholderColor="#D60000"/>
+            <Entry Placeholder="Correo Electronico" x:Name="txtCorreo"  PlaceholderColor="#D60000"  />
 
-            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+            <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand">
                 <Button Text="Registrar"  BackgroundColor="Goldenrod" WidthRequest="350" TextColor="Black" BorderRadius="20"  x:Name="btnVerificarRegistro"/>
                 <Button Text="Regresar"  BackgroundColor="Goldenrod" WidthRequest="350" TextColor="Black" BorderRadius="20"  x:Name="btnRegresar"/>
+                <Label x:Name="StatusMessage" FontSize="Medium" />
             </StackLayout>
 
-           
-           
+            
+            
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

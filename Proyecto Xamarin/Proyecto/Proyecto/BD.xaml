@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proyecto.BD">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+            <Button Text="Mostrar Base de Datos"  BackgroundColor="Goldenrod" WidthRequest="350" TextColor="Black" BorderRadius="20"  x:Name="btnMostrarBD"/>
+            <Label x:Name="StatusMessage" FontSize="Medium" />
+
+            <ListView x:Name="userList">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Label Text="{Binding username}" />
+                                <Label Grid.Column="1" Text="{Binding correo}" />
+                                <Label Grid.Column="2" Text="{Binding contraseña}" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

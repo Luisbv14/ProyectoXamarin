@@ -20,6 +20,8 @@
                 <Entry Placeholder="Contraseña" PlaceholderColor="#D60000" IsPassword="True" x:Name="psw"/>
                 <Button Text="Iniciar Sesion" BackgroundColor="Goldenrod" TextColor="Black" BorderRadius="20" x:Name="btnLogin"/>
                 <Button Text="Registrarse" BackgroundColor="Goldenrod" TextColor="Black" BorderRadius="20" x:Name="btnRegistrar"/>
+                <Button Text="Ver Base de Datos" BackgroundColor="Goldenrod" TextColor="Black" BorderRadius="20" x:Name="btnVerBD"/>
+
             </StackLayout>
         </Grid>
     </Grid>
