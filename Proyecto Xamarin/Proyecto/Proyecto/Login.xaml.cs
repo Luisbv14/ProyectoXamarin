@@ -33,6 +33,7 @@ namespace Proyecto
 
         private void BtnLogin_Clicked(object sender, EventArgs e)
         {
+            ((NavigationPage)this.Parent).PushAsync(new Menu());
             /*if (!(App.listaUsuarios.Find(i => i.username == usr.Text) == null && App.listaUsuarios.Find(i => i.contraseña == psw.Text) == null))
             {
                 usr.Text = "";
@@ -43,7 +44,7 @@ namespace Proyecto
             else
             {
                 ((NavigationPage)this.Parent).PushAsync(new Menu());
-            }*/
+            }
             bool userFound = false;
             bool pswFound = false;
             foreach (Usuario user in App.listaUsuarios)
@@ -77,6 +78,7 @@ namespace Proyecto
                 //Console.WriteLine("userfound: " + userFound);
                 //Console.WriteLine("pswfound: " + pswFound);
             }
+            */
 
         }
 

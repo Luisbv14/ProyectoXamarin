@@ -9,16 +9,16 @@
         <StackLayout BackgroundColor="#d9d9d9">
             <Image Grid.Column="0" Source="LogoAutoFast.png" WidthRequest="245" HeightRequest="245" Margin="0,50,0,0"/>
             <Label Text="ModeloCarro" FontSize="40" FontFamily="Arial" HorizontalTextAlignment="Center" TextColor="Goldenrod" x:Name="lblModelo"/>
-            <Image Source="" x:Name="imgGrande"/>
+            <Image Source="" WidthRequest="500" HeightRequest="500" Margin="0, 50, 0, 0" x:Name="imgGrande"/>
 
                 <Grid 
              ColumnDefinitions="25, 25, 25, 25"
              ColumnSpacing="8" 
              HorizontalOptions="FillAndExpand">
-                <Button BackgroundColor="White" Grid.Column="0" HorizontalOptions="FillAndExpand"  ImageSource="" x:Name="btnColor1"/>
-                <Button BackgroundColor="White" Grid.Column="1" HorizontalOptions="FillAndExpand" ImageSource=""  x:Name="btnColor2"/>
-                <Button BackgroundColor="White" Grid.Column="2" HorizontalOptions="FillAndExpand" ImageSource=""  x:Name="btnColor3"/>
-                <Button BackgroundColor="White" Grid.Column="3" HorizontalOptions="FillAndExpand" ImageSource=""  x:Name="btnColor4"/>
+                <Button BackgroundColor="White" Grid.Column="0" HorizontalOptions="FillAndExpand"   x:Name="btnColor1"/>
+                <Button BackgroundColor="White" Grid.Column="1" HorizontalOptions="FillAndExpand"   x:Name="btnColor2"/>
+                <Button BackgroundColor="White" Grid.Column="2" HorizontalOptions="FillAndExpand"   x:Name="btnColor3"/>
+                
             </Grid>
 
 

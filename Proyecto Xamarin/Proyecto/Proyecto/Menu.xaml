@@ -15,7 +15,7 @@
              ColumnSpacing="8" 
              HorizontalOptions="FillAndExpand">
                     <Button BackgroundColor="White" Grid.Column="0" HorizontalOptions="FillAndExpand"  ImageSource="https://cdn.discordapp.com/attachments/730938576560193607/824399959695949824/Honda400x400.png" x:Name="BtnModelosHonda"/>
-                    <Button BackgroundColor="White" Grid.Column="1" HorizontalOptions="FillAndExpand" ImageSource="https://cdn.discordapp.com/attachments/730938576560193607/824400505438208020/Nissan400x400.png"  x:Name=" BtnModelosNissan"/>
+                   <!--- <Button BackgroundColor="White" Grid.Column="1" HorizontalOptions="FillAndExpand" ImageSource="https://cdn.discordapp.com/attachments/730938576560193607/824400505438208020/Nissan400x400.png"  x:Name=" BtnModelosNissan"/> -->
                     <Button BackgroundColor="White" Grid.Column="2" HorizontalOptions="FillAndExpand" ImageSource="https://cdn.discordapp.com/attachments/730938576560193607/833103308620431390/Ford400x400.png"   x:Name="BtnModelosFord"/>
                 </Grid>
 
