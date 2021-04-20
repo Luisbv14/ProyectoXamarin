@@ -12,7 +12,7 @@
             <Image Source="" WidthRequest="500" HeightRequest="500" Margin="0, 50, 0, 0" x:Name="imgGrande"/>
 
                 <Grid 
-             ColumnDefinitions="25, 25, 25, 25"
+             ColumnDefinitions="33.33*, 33.33*, 33.33*"
              ColumnSpacing="8" 
              HorizontalOptions="FillAndExpand">
                 <Button BackgroundColor="White" Grid.Column="0" HorizontalOptions="FillAndExpand"   x:Name="btnColor1"/>

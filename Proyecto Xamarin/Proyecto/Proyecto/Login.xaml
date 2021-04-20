@@ -5,7 +5,7 @@
              NavigationPage.HasNavigationBar="False">
 
     <Grid>
-        <Image Source="FondoAutoFast.jpg" Aspect="AspectFill"/>
+        <Image Source="Fondo_AutoFast.png" Aspect="AspectFit"/>
         <BoxView Color="#d9d9d9"/>
         <Grid>
             <Grid.RowDefinitions>

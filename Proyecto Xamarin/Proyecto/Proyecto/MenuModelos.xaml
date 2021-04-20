@@ -7,13 +7,14 @@
     <ContentPage.Content>
         
         <StackLayout Background="#d9d9d9">
-            <Image Grid.Column="0" Source="LogoAutoFast.png" WidthRequest="245" HeightRequest="245" Margin="0,50,0,0"/>
-            <Label Text="Modelos disponibles" FontSize="45" FontFamily="Arial" HorizontalTextAlignment="Center"/>
+            <Image Grid.Column="0" Source="LogoAutoFast.png" WidthRequest="245" HeightRequest="245" Margin="0,40,0,0"/>
+            <Label Text="Modelos disponibles" FontSize="45" FontFamily="Arial" HorizontalTextAlignment="Center" x:Name="lblMarca" Margin="0,70,0,0" TextColor="Goldenrod"/>
 
             <Grid 
              ColumnDefinitions="33.33*, 33.33*, 33.33*"
              ColumnSpacing="8" 
-             HorizontalOptions="FillAndExpand">
+             HorizontalOptions="FillAndExpand"
+                Margin="0,20,0,0">
                 <Button BackgroundColor="White" Grid.Column="0" HorizontalOptions="FillAndExpand"  ImageSource="" x:Name="BtnOpcion1"/>
                 <Button BackgroundColor="White" Grid.Column="1" HorizontalOptions="FillAndExpand"  ImageSource="" x:Name="BtnOpcion2"/>
                 <Button BackgroundColor="White" Grid.Column="2" HorizontalOptions="FillAndExpand"  ImageSource="" x:Name="BtnOpcion3"/>
