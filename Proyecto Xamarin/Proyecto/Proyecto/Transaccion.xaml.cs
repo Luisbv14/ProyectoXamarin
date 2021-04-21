@@ -15,6 +15,16 @@ namespace Proyecto
         public Transaccion()
         {
             InitializeComponent();
+            btnComprar.Clicked += BtnComprar_Clicked;
+        }
+
+        private void BtnComprar_Clicked(object sender, EventArgs e)
+        {
+            var tipoTar = pickerTipoTarjeta.SelectedIndex;
+            var tituTar = TitularTarjeta.Text;
+            var numTar = numeroTarjeta.Text;
+            var ccvTar = ccvEX.Text;
+
         }
     }
 }
