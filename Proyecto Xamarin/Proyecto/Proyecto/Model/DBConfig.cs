@@ -64,6 +64,8 @@ namespace Proyecto.Model
             { EstadoMensajeUsuario = e.Message; }
             return result;
         }
+
+        // *******************************TRAER TODOS LOS USUARIOS*****************
         public IEnumerable<Usuario> GetAllUsers()
         {
             try
@@ -76,7 +78,22 @@ namespace Proyecto.Model
             }
             return Enumerable.Empty<Usuario>();
         }
-
+        
+        // *******************************TRAER USUARIOS ESPECIFICOS*****************
+        public String GetUser(String userName)
+        {
+            string result = "";
+            try
+            {
+                result = con.Table<Usuario>().Where(user => user.username.Contains(userName))
+                    //.Select(user => user.contraseña).ToString();
+            }
+            catch (Exception e)
+            {
+                EstadoMensajeUsuario = e.Message;
+            }
+            return result;
+        }
 
         // ******************************AGREGAR TARJETA******************************
 

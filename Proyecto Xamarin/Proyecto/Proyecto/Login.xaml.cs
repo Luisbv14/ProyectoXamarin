@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.ComponentModel;
 using System.Text;
 using System.Threading.Tasks;
-
+using Proyecto.Model;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -33,7 +34,15 @@ namespace Proyecto
 
         private void BtnLogin_Clicked(object sender, EventArgs e)
         {
-            ((NavigationPage)this.Parent).PushAsync(new Menu());
+            //((NavigationPage)this.Parent).PushAsync(new Menu());
+
+            var resultado = DBConfig.Instancia.GetUser(usr.Text);
+
+            lbl_resultado.Text = "resultado: " + resultado;
+
+
+
+
             /*if (!(App.listaUsuarios.Find(i => i.username == usr.Text) == null && App.listaUsuarios.Find(i => i.contraseña == psw.Text) == null))
             {
                 usr.Text = "";

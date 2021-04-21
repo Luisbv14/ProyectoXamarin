@@ -41,9 +41,9 @@ namespace Proyecto
 
                 StatusMessage.Text = String.Empty; 
                 DBConfig.Instancia.AddNewUser(txtUsuario.Text, txtPassword.Text, txtCorreo.Text);
-                StatusMessage.Text = DBConfig.Instancia.EstadoMensajeUsuario; 
+                //StatusMessage.Text = DBConfig.Instancia.EstadoMensajeUsuario; 
 
-
+                ((NavigationPage)this.Parent).PushAsync(new Login());
 
 
 
@@ -54,19 +54,19 @@ namespace Proyecto
                 //bool emailFound = false;
 
                 //revisa cada objeto de la lista para saber si el usuario y la contraseña ya existen en la base de datos
-               /*foreach (Usuario user in App.listaUsuarios) {
-                    if (user.username == txtUsuario.Text)
-                    {
-                        userFound = true;
-                        DisplayAlert("Advertencia", "El usuario ya existe en la base de datos", "Ok");
-                        break;
-                    } else if(user.correo == txtCorreo.Text)
-                    {
-                        emailFound = true;
-                        DisplayAlert("Advertencia", "El correo ya existe en la base de datos", "Ok");
-                        break;
-                    }
-                }*/
+                /*foreach (Usuario user in App.listaUsuarios) {
+                     if (user.username == txtUsuario.Text)
+                     {
+                         userFound = true;
+                         DisplayAlert("Advertencia", "El usuario ya existe en la base de datos", "Ok");
+                         break;
+                     } else if(user.correo == txtCorreo.Text)
+                     {
+                         emailFound = true;
+                         DisplayAlert("Advertencia", "El correo ya existe en la base de datos", "Ok");
+                         break;
+                     }
+                 }*/
 
                 //verifica si los datos no fueron encontrados en la base de datos, en caso de ser así, lo agrega a la base
                 /*if (emailFound is false && userFound is false)
@@ -79,8 +79,8 @@ namespace Proyecto
                 //limpia los entrys
                 //txtUsuario.Text = "";
                 //txtPassword.Text = "";
-               // txtPaswordConfirm.Text = "";
-               // txtCorreo.Text = "";
+                // txtPaswordConfirm.Text = "";
+                // txtCorreo.Text = "";
 
                 //imprime cada uno de los objetos de la lista
                 /*foreach (Usuario user in App.listaUsuarios)

@@ -22,6 +22,8 @@
                 <Button Text="Registrarse" BackgroundColor="Goldenrod" TextColor="Black" BorderRadius="20" x:Name="btnRegistrar"/>
                 <Button Text="Ver Base de Datos" BackgroundColor="Goldenrod" TextColor="Black" BorderRadius="20" x:Name="btnVerBD"/>
 
+                <Label x:Name="lbl_resultado" FontSize="Medium">Test</Label>
+
             </StackLayout>
         </Grid>
     </Grid>
