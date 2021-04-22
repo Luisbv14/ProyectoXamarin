@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using SQLite;
 
 namespace Proyecto.Model
@@ -85,7 +84,7 @@ namespace Proyecto.Model
             string result = "";
             try
             {
-                result = con.Table<Usuario>().Where(user => user.username.Contains(userName))
+                result = con.Table<Usuario>().Where(user => user.username.Contains(userName)).ToString();
                     //.Select(user => user.contraseña).ToString();
             }
             catch (Exception e)
