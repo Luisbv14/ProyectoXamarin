@@ -20,5 +20,8 @@ namespace Proyecto.Model
         [MaxLength(50), NotNull]
         public String tipo { get; set; }
 
+        [NotNull]
+        public float monto { get; set; }
+
     }
 }

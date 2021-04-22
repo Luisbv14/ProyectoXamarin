@@ -46,7 +46,7 @@ namespace Proyecto.Model
         // ******************************CREAR USUARIO******************************
 
         public string EstadoMensajeUsuario;
-        public int AddNewUser(string username, string contraseña, string correo)
+        public int AddNewUser(string username, string contraseña, string correo, float deuda)
         {
             int result = 0;
             try
@@ -55,7 +55,8 @@ namespace Proyecto.Model
                 {
                     username = username,
                     correo = correo,
-                    contraseña = contraseña
+                    contraseña = contraseña,
+                    deuda = deuda
                 });
                 EstadoMensajeUsuario = string.Format("Cantidad filas : {0}", result);
             }
@@ -96,7 +97,7 @@ namespace Proyecto.Model
         // ******************************AGREGAR TARJETA******************************
 
         public string EstadoMensajeTarjeta;
-        public int AgregarTarjeta(string numTarjeta, string ccv, string Titular, string tipo)
+        public int AgregarTarjeta(string numTarjeta, string ccv, string Titular, string tipo, float monto)
         {
             int result = 0;
             try
@@ -106,7 +107,8 @@ namespace Proyecto.Model
                     numTarjeta = numTarjeta,
                     ccv = ccv,
                     Titular = Titular,
-                    tipo = tipo
+                    tipo = tipo,
+                    monto = monto
                 });
                 EstadoMensajeTarjeta = string.Format("Cantidad filas : {0}", result);
             }
