@@ -17,9 +17,9 @@ class Usuario
     [MaxLength(50), NotNull]
     public String contraseña { get; set; }
 
-    [NotNull]
+   /* [NotNull]
     public float deuda { get; set; }
-
+   */
 
 
     }

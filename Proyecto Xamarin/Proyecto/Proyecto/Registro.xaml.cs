@@ -40,7 +40,7 @@ namespace Proyecto
                 }
 
                 StatusMessage.Text = String.Empty; 
-                DBConfig.Instancia.AddNewUser(txtUsuario.Text, txtPassword.Text, txtCorreo.Text);
+                DBConfig.Instancia.AddNewUser(txtUsuario.Text, txtPassword.Text, txtCorreo.Text, 0);
                 //StatusMessage.Text = DBConfig.Instancia.EstadoMensajeUsuario; 
 
                 ((NavigationPage)this.Parent).PushAsync(new Login());

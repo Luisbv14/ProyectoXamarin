@@ -73,7 +73,7 @@ namespace Proyecto
                 color3 = new Uri("");
             }
 
-            ((NavigationPage)this.Parent).PushAsync(new ModeloSeleccion(modeloSeleccionado, color1, color2, color3));
+            ((NavigationPage)this.Parent).PushAsync(new ModeloSeleccion(marcaSelect,modeloSeleccionado, color1, color2, color3));
         }
 
         private void BtnOpcion2_Clicked(object sender, EventArgs e)
@@ -120,7 +120,7 @@ namespace Proyecto
                 color2 = new Uri("https://cdn.discordapp.com/attachments/730938576560193607/833859183367553054/YarisDarkBlueMicaMetallic.png");
                 color3 = new Uri("https://cdn.discordapp.com/attachments/730938576560193607/833859181781843978/ToyotaYarisBlackMicaInk.png");
             }
-            ((NavigationPage)this.Parent).PushAsync(new ModeloSeleccion(modeloSeleccionado, color1, color2, color3));
+           ((NavigationPage)this.Parent).PushAsync(new ModeloSeleccion(marcaSelect, modeloSeleccionado, color1, color2, color3));
         }
         private void BtnOpcion3_Clicked(object sender, EventArgs e)
         {
@@ -166,7 +166,7 @@ namespace Proyecto
                 color2 = new Uri("https://cdn.discordapp.com/attachments/730938576560193607/833859186622332928/AGYARojo.png");
                 color3 = new Uri("https://cdn.discordapp.com/attachments/730938576560193607/833859185866833940/AGYANaranja.png");
             }
-            ((NavigationPage)this.Parent).PushAsync(new ModeloSeleccion(modeloSeleccionado, color1, color2, color3));
+            ((NavigationPage)this.Parent).PushAsync(new ModeloSeleccion(marcaSelect, modeloSeleccionado, color1, color2, color3));
         }
     }
 }

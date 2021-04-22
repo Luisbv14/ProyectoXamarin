@@ -56,7 +56,7 @@ namespace Proyecto.Model
                     username = username,
                     correo = correo,
                     contraseña = contraseña,
-                    deuda = deuda
+                   /* deuda = deuda */
                 });
                 EstadoMensajeUsuario = string.Format("Cantidad filas : {0}", result);
             }
@@ -108,7 +108,7 @@ namespace Proyecto.Model
                     ccv = ccv,
                     Titular = Titular,
                     tipo = tipo,
-                    monto = monto
+                    /*monto = monto*/
                 });
                 EstadoMensajeTarjeta = string.Format("Cantidad filas : {0}", result);
             }

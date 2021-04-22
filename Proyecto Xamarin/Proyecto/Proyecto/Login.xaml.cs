@@ -23,7 +23,7 @@ namespace Proyecto
 
         private void BtnVerBD_Clicked(object sender, EventArgs e)
         {
-            ((NavigationPage)this.Parent).PushAsync(new BD());
+            ((NavigationPage)this.Parent).PushAsync(new BancoPrima());
         }
 
         private void BtnRegistrar_Clicked(object sender, EventArgs e)

@@ -15,7 +15,7 @@
 
             <Label Text="Seleción del Porcentaje de Prima" TextColor="Goldenrod" FontSize="25"/>
 
-            <Picker x:Name="Prima" Title="Procentaje de Prima">
+            <Picker x:Name="porcentajePrima" Title="Procentaje de Prima">
                 <Picker.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
                         <x:String>10%</x:String>
@@ -25,14 +25,18 @@
                 </Picker.ItemsSource>
             </Picker>
 
-            <Entry Text="Monto de la prima" IsEnabled="False"/>
+
+            <Button Text="Calcular prima" x:Name="btnCalcular" FontSize="12"/>
+            <Entry Text="Monto de la prima" IsEnabled="False"  x:Name="montoPrima"/>
+
+
             <!-- End of the picker for the amount of car press porcentage -->
-            
+
             <!-- Picker for the bank and % of interest -->
 
             <Label Text="Seleción del Banco" TextColor="Goldenrod" FontSize="25"/>
 
-            <Picker x:Name="Intereses" Title="Procentaje de Intereses" HorizontalOptions="Center">
+            <Picker x:Name="Banco" Title="Bancos disponibles" HorizontalOptions="Center">
                 <Picker.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
                         <x:String>BN</x:String>
@@ -41,9 +45,19 @@
                     </x:Array>
                 </Picker.ItemsSource>
             </Picker>
-            
-            <Entry Text="Procentaje de intereses" IsEnabled="False"/>
 
+            <Picker x:Name="plazos" Title="Plazos">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>5 (60 meses)</x:String>
+                        <x:String>7 (84 meses)</x:String>
+                        <x:String>8 (96 meses)</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <Button Text="Calcular prima" x:Name="btnCalcularTasa" FontSize="12"/>
+            <Entry Text="Tasa de intereses" IsEnabled="False" x:Name="EnTasa"/>
+            <Entry Text="Cuota mensual" IsEnabled="False" x:Name="EnMontoMensual"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
