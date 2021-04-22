@@ -81,17 +81,15 @@ namespace Proyecto.Model
         // *******************************TRAER USUARIOS ESPECIFICOS*****************
         public String GetUser(String userName)
         {
-            string result = "";
             try
             {
-                result = con.Table<Usuario>().Where(user => user.username.Contains(userName)).ToString();
-                    //.Select(user => user.contraseña).ToString();
+                return con.Table<Usuario>().Where(user => user.username.Contains(userName));
             }
             catch (Exception e)
             {
                 EstadoMensajeUsuario = e.Message;
             }
-            return result;
+            return Enumerable.Empty<Usuario>();
         }
 
         // ******************************AGREGAR TARJETA******************************

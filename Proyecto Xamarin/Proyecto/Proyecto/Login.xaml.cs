@@ -38,7 +38,7 @@ namespace Proyecto
 
             var resultado = DBConfig.Instancia.GetUser(usr.Text);
 
-            lbl_resultado.Text = "resultado: " + resultado;
+            lbl_resultado.Text = "usuario: " + resultado.username + ", contraseña: " + resultado.contraseña;
 
 
 
