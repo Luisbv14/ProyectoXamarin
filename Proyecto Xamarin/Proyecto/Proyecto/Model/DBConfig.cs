@@ -46,7 +46,7 @@ namespace Proyecto.Model
         // ******************************CREAR USUARIO******************************
 
         public string EstadoMensajeUsuario;
-        public int AddNewUser(string username, string correo, string contraseña)
+        public int AddNewUser(string username, string contraseña, string correo)
         {
             int result = 0;
             try
@@ -79,17 +79,18 @@ namespace Proyecto.Model
         }
         
         // *******************************TRAER USUARIOS ESPECIFICOS*****************
-        public String GetUser(String userName)
+        public Usuario GetUser(String userName)
         {
             try
             {
-                return con.Table<Usuario>().Where(user => user.username.Contains(userName));
+                //return con.Table<Usuario>().Where(user => user.username.Contains(userName));
+                return con.Table<Usuario>().FirstOrDefault(user => user.username == userName);
             }
             catch (Exception e)
             {
                 EstadoMensajeUsuario = e.Message;
             }
-            return Enumerable.Empty<Usuario>();
+            return null;
         }
 
         // ******************************AGREGAR TARJETA******************************

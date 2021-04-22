@@ -36,9 +36,30 @@ namespace Proyecto
         {
             //((NavigationPage)this.Parent).PushAsync(new Menu());
 
-            var resultado = DBConfig.Instancia.GetUser(usr.Text);
+            Proyecto.Model.Usuario resultado = new Proyecto.Model.Usuario();
 
-            lbl_resultado.Text = "usuario: " + resultado.username + ", contraseña: " + resultado.contraseña;
+            if(string.IsNullOrEmpty(usr.Text) || string.IsNullOrEmpty(psw.Text))
+            {
+                DisplayAlert("Advertencia", "Por favor, rellene los espacios", "OK");
+            } else {
+                try
+                {
+                    resultado = DBConfig.Instancia.GetUser(usr.Text);
+                } catch(Exception f)
+                {
+                    DisplayAlert("Advertencia", "Hubo un error", "OK");
+                    Console.WriteLine("Error en login: " + f);
+                }
+
+                lbl_resultado.Text = "usuario: " + resultado.username + ", contraseña: " + resultado.contraseña;
+                if (resultado.contraseña == psw.Text)
+                {
+                    ((NavigationPage)this.Parent).PushAsync(new Menu());
+                } else
+                {
+                    DisplayAlert("Advertencia", "Las contraseñas es incorrecta", "OK");
+                }
+            }
 
 
 
