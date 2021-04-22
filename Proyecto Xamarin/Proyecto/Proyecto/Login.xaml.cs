@@ -51,7 +51,7 @@ namespace Proyecto
                     Console.WriteLine("Error en login: " + f);
                 }
 
-                lbl_resultado.Text = "usuario: " + resultado.username + ", contraseña: " + resultado.contraseña;
+                //lbl_resultado.Text = "usuario: " + resultado.username + ", contraseña: " + resultado.contraseña;
                 if (resultado.contraseña == psw.Text)
                 {
                     ((NavigationPage)this.Parent).PushAsync(new Menu());
