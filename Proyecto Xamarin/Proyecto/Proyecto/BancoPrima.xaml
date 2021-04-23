@@ -13,18 +13,25 @@
 
             <!-- Picker for the amount of car press porcentage -->
             <Label Text="Seleción del Porcentaje de Prima" TextColor="OrangeRed" FontSize="25"/>
-            <Grid ColumnDefinitions="2" RowDefinitions="1">
-            <Picker Title="Procentaje de Prima" x:Name="porcentajePrima" >
-                 <Picker.ItemsSource>
-                     <x:Array Type="{x:Type x:String}">
-                         <x:String>10%</x:String>
-                         <x:String>15%</x:String>
-                         <x:String>20%</x:String>
-                     </x:Array>
-                </Picker.ItemsSource>
-            </Picker>
-            <Button Text="Calcular prima" x:Name="btnCalcular" FontSize="12"/>
-            </Grid>
+
+            <RelativeLayout HorizontalOptions="FillAndExpand">
+                <Picker Title="Procentaje de Prima" x:Name="porcentajePrima" RelativeLayout.XConstraint="{ConstraintExpression 
+            Type=RelativeToParent,Property=Width,Factor=.0000,Constant=0}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+            Property=Width,Factor=.3333,Constant=0}">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>10%</x:String>
+                            <x:String>15%</x:String>
+                            <x:String>20%</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                <Button Text="Calcular prima" x:Name="btnCalcular" RelativeLayout.XConstraint="{ConstraintExpression
+            Type=RelativeToParent,Property=Width,Factor=.3333,Constant=0}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+            Property=Width,Factor=.3333,Constant=0}"/>
+            </RelativeLayout>
 
             <Entry Text="Monto de la prima" IsEnabled="False"  x:Name="montoPrima"/>
 
