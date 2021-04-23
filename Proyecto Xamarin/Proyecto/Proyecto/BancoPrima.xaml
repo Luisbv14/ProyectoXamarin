@@ -12,28 +12,6 @@
             <Image Grid.Column="0" Source="LogoAutoFast.png" WidthRequest="240" HeightRequest="240" Margin="0,50,0,0"/>
 
             <!-- Picker for the amount of car press porcentage -->
-<<<<<<< HEAD
-            <Label Text="Seleción del Porcentaje de Prima" TextColor="OrangeRed" FontSize="25"/>
-
-            <RelativeLayout HorizontalOptions="FillAndExpand">
-                <Picker Title="Procentaje de Prima" x:Name="porcentajePrima" RelativeLayout.XConstraint="{ConstraintExpression 
-            Type=RelativeToParent,Property=Width,Factor=.0000,Constant=0}"
-            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
-            Property=Width,Factor=.3333,Constant=0}">
-                    <Picker.ItemsSource>
-                        <x:Array Type="{x:Type x:String}">
-                            <x:String>10%</x:String>
-                            <x:String>15%</x:String>
-                            <x:String>20%</x:String>
-                        </x:Array>
-                    </Picker.ItemsSource>
-                </Picker>
-                <Button Text="Calcular prima" x:Name="btnCalcular" RelativeLayout.XConstraint="{ConstraintExpression
-            Type=RelativeToParent,Property=Width,Factor=.3333,Constant=0}"
-            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
-            Property=Width,Factor=.3333,Constant=0}"/>
-            </RelativeLayout>
-=======
 
             <Label Text="Seleción del Porcentaje de Prima" TextColor="Goldenrod" FontSize="25"/>
 
@@ -46,7 +24,6 @@
                     </x:Array>
                 </Picker.ItemsSource>
             </Picker>
->>>>>>> parent of 8d04ee8 (Cambios a interfaces)
 
 
             <Button Text="Calcular prima" x:Name="btnCalcular" FontSize="12"/>
