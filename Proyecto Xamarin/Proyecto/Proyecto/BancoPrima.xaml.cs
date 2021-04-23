@@ -17,15 +17,19 @@ namespace Proyecto
             InitializeComponent();
             btnCalcular.Clicked += BtnCalcular_Clicked;
             btnCalcularTasa.Clicked += BtnCalcularTasa_Clicked;
+            btnAvanzar.Clicked += BtnAvanzar_Clicked;
         }
 
+        private void BtnAvanzar_Clicked(object sender, EventArgs e)
+        {
+            ((NavigationPage)this.Parent).PushAsync(new Transaccion());
+        }
 
-
-        static int costoVehiculo = 12345;
+        static int costoVehiculo = 63000;
         static float primaMonto;
-        static int cantidadPlazos;
+        static float cantidadPlazos;
         static float tasaInteres;
-        static int montoMensual;
+        static double montoMensual;
 
 
         private void BtnCalcular_Clicked(object sender, EventArgs e)
@@ -44,7 +48,7 @@ namespace Proyecto
                 primaMonto = costoVehiculo * (20 / 100f);
             }
 
-            montoPrima.Text =""+ primaMonto;
+            montoPrima.Text ="El monto de la prima es de: "+ primaMonto;
         }
 
         private void BtnCalcularTasa_Clicked(object sender, EventArgs e)
@@ -67,6 +71,15 @@ namespace Proyecto
                 tasaInteres = (7.40f / 100f) * 100;
                 EnTasa.Text = tasaInteres + "%";
             }
+            calcularCuotaMensual();
+            EnMontoMensual.Text = "La tasa de interes bajo la cantidad de "+ cantidadPlazos+" es de: "+ montoMensual;
+
+        }
+
+
+        private void calcularCuotaMensual() 
+        {
+            montoMensual = ((costoVehiculo * Math.Pow(tasaInteres / 12 * (1 + tasaInteres / 12), cantidadPlazos)) / Math.Pow(1 + tasaInteres / 12, cantidadPlazos)-1);
         }
     }
 }

@@ -3,19 +3,21 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Proyecto.BancoPrima"
              NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#2F2F2F"
              >
     <ContentPage.Content>
         <StackLayout>
 
             <!--<Image Source="FondoAutoFastAlterno.png" Aspect="AspectFit" />-->
 
-            <Image Grid.Column="0" Source="LogoAutoFast.png" WidthRequest="240" HeightRequest="240" Margin="0,50,0,0"/>
+            <Image Grid.Column="0" Source="Autofast_gris.png" WidthRequest="240" HeightRequest="240" Margin="0,50,0,0"/>
 
             <!-- Picker for the amount of car press porcentage -->
 
-            <Label Text="Seleción del Porcentaje de Prima" TextColor="Goldenrod" FontSize="25"/>
+            <Label Text="Seleción del Porcentaje de Prima" TextColor="OrangeRed" FontSize="25"/>
 
-            <Picker x:Name="porcentajePrima" Title="Procentaje de Prima">
+            
+            <Picker x:Name="porcentajePrima" Title="Porcentaje de Prima" TextColor="OrangeRed" >
                 <Picker.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
                         <x:String>10%</x:String>
@@ -26,7 +28,7 @@
             </Picker>
 
 
-            <Button Text="Calcular prima" x:Name="btnCalcular" FontSize="12"/>
+            <Button Text="Calcular prima" x:Name="btnCalcular" FontSize="12" TextColor="Black" CornerRadius="20" BackgroundColor="Goldenrod"/>
             <Entry Text="Monto de la prima" IsEnabled="False"  x:Name="montoPrima"/>
 
 
@@ -34,9 +36,9 @@
 
             <!-- Picker for the bank and % of interest -->
 
-            <Label Text="Seleción del Banco" TextColor="Goldenrod" FontSize="25"/>
+            <Label Text="Seleción del Banco" TextColor="OrangeRed" FontSize="25"/>
 
-            <Picker x:Name="Banco" Title="Bancos disponibles" HorizontalOptions="Center">
+            <Picker x:Name="Banco" Title="Bancos disponibles" HorizontalOptions="Center" TextColor="OrangeRed">
                 <Picker.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
                         <x:String>BN</x:String>
@@ -46,7 +48,7 @@
                 </Picker.ItemsSource>
             </Picker>
 
-            <Picker x:Name="plazos" Title="Plazos">
+            <Picker x:Name="plazos" Title="Plazos" TextColor="OrangeRed">
                 <Picker.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
                         <x:String>5 (60 meses)</x:String>
@@ -55,9 +57,11 @@
                     </x:Array>
                 </Picker.ItemsSource>
             </Picker>
-            <Button Text="Calcular prima" x:Name="btnCalcularTasa" FontSize="12"/>
-            <Entry Text="Tasa de intereses" IsEnabled="False" x:Name="EnTasa"/>
-            <Entry Text="Cuota mensual" IsEnabled="False" x:Name="EnMontoMensual"/>
+            <Button BackgroundColor="Goldenrod" CornerRadius="20" Text="Calcular prima" x:Name="btnCalcularTasa" FontSize="12" />
+            <Entry Text="Tasa de intereses" IsEnabled="False" x:Name="EnTasa" TextColor="OrangeRed"/>
+            <Entry Text="Cuota mensual" IsEnabled="False" x:Name="EnMontoMensual" TextColor="OrangeRed"/>
+
+            <Button BackgroundColor="Goldenrod" CornerRadius="20" Text="Continuar" x:Name="btnAvanzar"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

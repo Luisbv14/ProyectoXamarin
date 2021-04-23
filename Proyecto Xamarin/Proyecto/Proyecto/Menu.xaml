@@ -2,30 +2,31 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Proyecto.Menu"
-             NavigationPage.HasNavigationBar="False">
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#2F2F2F">
     <ContentPage.Content>
 <!-- Lexus,kia, Hyundai, Honda,etc  -->
         <StackLayout BackgroundColor="#d9d9d9">
-            <Image Grid.Column="0" Source="LogoAutoFast.png" WidthRequest="245" HeightRequest="245" Margin="0,50,0,0"/>
-            <Label Text="Marcas disponibles" FontSize="40" FontFamily="Arial" HorizontalTextAlignment="Center" TextColor="Goldenrod"/>
+            <Image Grid.Column="0" Source="Autofast_gris.png" WidthRequest="245" HeightRequest="245" Margin="0,50,0,0"/>
+            <Label Text="Marcas disponibles" FontSize="40" FontFamily="Arial" HorizontalTextAlignment="Center" TextColor="OrangeRed"/>
 
             <StackLayout Padding="20" Spacing="15">
                 <Grid 
              ColumnDefinitions="33.33*, 33.33*, 33.33*"
              ColumnSpacing="8" 
              HorizontalOptions="FillAndExpand">
-                    <Button BackgroundColor="White" Grid.Column="0" HorizontalOptions="FillAndExpand"  ImageSource="https://cdn.discordapp.com/attachments/730938576560193607/824399959695949824/Honda400x400.png" x:Name="BtnModelosHonda"/>
-                    <Button BackgroundColor="White" Grid.Column="1" HorizontalOptions="FillAndExpand" ImageSource="https://cdn.discordapp.com/attachments/730938576560193607/824400505438208020/Nissan400x400.png"  x:Name="BtnModelos"/>
-                    <Button BackgroundColor="White" Grid.Column="2" HorizontalOptions="FillAndExpand" ImageSource="https://cdn.discordapp.com/attachments/730938576560193607/833103308620431390/Ford400x400.png"   x:Name="BtnModelosFord"/>
+                    <Button BackgroundColor="#2F2F2F" Grid.Column="0" HorizontalOptions="FillAndExpand"  ImageSource="https://cdn.discordapp.com/attachments/730938576560193607/824399959695949824/Honda400x400.png" x:Name="BtnModelosHonda"/>
+                    <Button BackgroundColor="#2F2F2F" Grid.Column="1" HorizontalOptions="FillAndExpand" ImageSource="https://cdn.discordapp.com/attachments/730938576560193607/824400505438208020/Nissan400x400.png"  x:Name="BtnModelos"/>
+                    <Button BackgroundColor="#2F2F2F" Grid.Column="2" HorizontalOptions="FillAndExpand" ImageSource="https://cdn.discordapp.com/attachments/730938576560193607/833103308620431390/Ford400x400.png"   x:Name="BtnModelosFord"/>
                 </Grid>
 
                 <Grid 
              ColumnDefinitions="33.33*, 33.33*, 33.33*"
              ColumnSpacing="8" 
              HorizontalOptions="FillAndExpand">
-                    <Button BackgroundColor="White" Grid.Column="0" HorizontalOptions="FillAndExpand"  ImageSource="https://cdn.discordapp.com/attachments/730938576560193607/833103053535707136/Toyota400x400.png"  x:Name="BtnModelosToyota"/>
-                    <Button BackgroundColor="White" Grid.Column="1" HorizontalOptions="FillAndExpand" ImageSource="https://cdn.discordapp.com/attachments/730938576560193607/833103489290600468/Lexus400x400.png" x:Name="BtnModelosLexus"/>
-                    <Button BackgroundColor="White" Grid.Column="2" HorizontalOptions="FillAndExpand" ImageSource="https://cdn.discordapp.com/attachments/730938576560193607/833006760313880596/Kia400x400.png"  x:Name="BtnModelosKia"/>
+                    <Button BackgroundColor="#2F2F2F" Grid.Column="0" HorizontalOptions="FillAndExpand"  ImageSource="https://cdn.discordapp.com/attachments/730938576560193607/833103053535707136/Toyota400x400.png"  x:Name="BtnModelosToyota"/>
+                    <Button BackgroundColor="#2F2F2F" Grid.Column="1" HorizontalOptions="FillAndExpand" ImageSource="https://cdn.discordapp.com/attachments/730938576560193607/833103489290600468/Lexus400x400.png" x:Name="BtnModelosLexus"/>
+                    <Button BackgroundColor="#2F2F2F" Grid.Column="2" HorizontalOptions="FillAndExpand" ImageSource="https://cdn.discordapp.com/attachments/730938576560193607/833006760313880596/Kia400x400.png"  x:Name="BtnModelosKia"/>
                 </Grid>
             </StackLayout>
         </StackLayout>

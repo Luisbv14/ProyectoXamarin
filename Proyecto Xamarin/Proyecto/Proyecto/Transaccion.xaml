@@ -2,12 +2,14 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Proyecto.Transaccion"
-             NavigationPage.HasNavigationBar="False">
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#2F2F2F">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Metodo de pago" FontSize="45" FontFamily="Arial" HorizontalTextAlignment="Center"/>
-            <Entry Keyboard="Numeric" Placeholder="Numero de telefono nacional"/>
-            <Picker x:Name="pickerTipoTarjeta" Title="Tipos de tarjetas">
+            <Image Grid.Column="0" Source="Autofast_gris.png" WidthRequest="245" HeightRequest="245" Margin="0,50,0,0"/>
+            <Label Text="Metodo de pago" TextColor="OrangeRed" FontSize="45" FontFamily="Arial" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
+            <Entry TextColor="OrangeRed" Keyboard="Numeric" Placeholder="Numero de telefono nacional"/>
+            <Picker TextColor="OrangeRed" x:Name="pickerTipoTarjeta" Title="Tipos de tarjetas">
                 <Picker.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
                         <x:String>American Express</x:String>
@@ -17,11 +19,11 @@
                 </Picker.ItemsSource>
             </Picker>
 
-            <Entry Placeholder="Titular de la tarjeta" x:Name="TitularTarjeta"/>
-            <Entry Keyboard="Numeric" Placeholder="Numero de tarjeta" x:Name="numeroTarjeta"/>
+            <Entry TextColor="OrangeRed" Placeholder="Titular de la tarjeta" x:Name="TitularTarjeta"/>
+            <Entry TextColor="OrangeRed" Keyboard="Numeric" Placeholder="Numero de tarjeta" x:Name="numeroTarjeta"/>
 
             <RelativeLayout HorizontalOptions="FillAndExpand">
-                <Picker Title="---" RelativeLayout.XConstraint="{ConstraintExpression 
+                <Picker TextColor="OrangeRed" Title="---" RelativeLayout.XConstraint="{ConstraintExpression 
             Type=RelativeToParent,Property=Width,Factor=.0000,Constant=0}"
             RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
             Property=Width,Factor=.3333,Constant=0}" x:Name="MesEX">
@@ -42,7 +44,7 @@
                         </x:Array>
                     </Picker.ItemsSource>
                 </Picker>
-                <Picker Title="---" RelativeLayout.XConstraint="{ConstraintExpression
+                <Picker TextColor="OrangeRed" Title="---" RelativeLayout.XConstraint="{ConstraintExpression
             Type=RelativeToParent,Property=Width,Factor=.3333,Constant=0}"
             RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
             Property=Width,Factor=.3333,Constant=0}" x:Name="YearEX">
@@ -67,7 +69,7 @@
                     </Picker.ItemsSource>
                 </Picker>
 
-                <Entry Keyboard="Numeric" Text="CCV" RelativeLayout.XConstraint="{ConstraintExpression
+                <Entry MaxLength="3" TextColor="OrangeRed" Keyboard="Numeric" Placeholder="CCV" RelativeLayout.XConstraint="{ConstraintExpression
             Type=RelativeToParent,Property=Width,Factor=.6666,Constant=0}"
             RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
             Property=Width,Factor=.3333,Constant=0}" x:Name="ccvEX">
@@ -75,17 +77,19 @@
 
             </RelativeLayout>
 
+
+
             <RelativeLayout HorizontalOptions="FillAndExpand">
-                <Button Text="Regresar" RelativeLayout.XConstraint="{ConstraintExpression 
-            Type=RelativeToParent,Property=Width,Factor=.0000,Constant=0}"
+                <Button CornerRadius="20" BackgroundColor="Goldenrod" Text="Regresar" RelativeLayout.XConstraint="{ConstraintExpression 
+            Type=RelativeToParent,Property=Width,Factor=.0000,Constant=0}" 
             RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
-            Property=Width,Factor=.3333,Constant=0}" x:Name="btnRegresarMenuModelos"/>
-                <Button Text="Comprar" RelativeLayout.XConstraint="{ConstraintExpression
+            Property=Width,Factor=.3333,Constant=0}"  x:Name="btnRegresarMenuModelos"/>
+                <Button CornerRadius="20" BackgroundColor="Goldenrod" Text="Comprar" RelativeLayout.XConstraint="{ConstraintExpression
             Type=RelativeToParent,Property=Width,Factor=.3333,Constant=0}"
             RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
             Property=Width,Factor=.3333,Constant=0}" x:Name="btnComprar"/>
             </RelativeLayout>
-            
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
