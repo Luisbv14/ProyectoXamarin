@@ -12,22 +12,30 @@ namespace Proyecto
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class BancoPrima : ContentPage
     {
-        public BancoPrima()
+        public BancoPrima(string marca, string modelo, string color)
         {
             InitializeComponent();
+
             btnCalcular.Clicked += BtnCalcular_Clicked;
             btnCalcularTasa.Clicked += BtnCalcularTasa_Clicked;
             btnAvanzar.Clicked += BtnAvanzar_Clicked;
+            marcaSelected =marca;
+            modeloSelected =modelo;
+            colorSelected = color;
         }
 
         private void BtnAvanzar_Clicked(object sender, EventArgs e)
         {
-            ((NavigationPage)this.Parent).PushAsync(new Transaccion());
+            ((NavigationPage)this.Parent).PushAsync(new Transaccion(marcaSelected, modeloSelected, colorSelected, costoVehiculo, primaMonto, cantidadPlazos, tasaInteres, montoMensual));
         }
 
-        static int costoVehiculo = 63000;
+        static string marcaSelected;
+        static string modeloSelected;
+        static string colorSelected;
+
+        static float costoVehiculo = 63000;
         static float primaMonto;
-        static float cantidadPlazos;
+        static int cantidadPlazos;
         static float tasaInteres;
         static double montoMensual;
 

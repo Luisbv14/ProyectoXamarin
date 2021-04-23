@@ -43,7 +43,7 @@ namespace Proyecto
 
         private void BtnContinuePay_Clicked(object sender, EventArgs e)
         {
-            ((NavigationPage)this.Parent).PushAsync(new BancoPrima());
+            ((NavigationPage)this.Parent).PushAsync(new BancoPrima(marcaSeleccionada, modeloSeleccionado, colorSeleccionado));
         }
 
         private void BtnColor1_Clicked(object sender, EventArgs e)

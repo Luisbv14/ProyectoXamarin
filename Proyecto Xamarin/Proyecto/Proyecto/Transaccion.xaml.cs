@@ -12,11 +12,28 @@ namespace Proyecto
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Transaccion : ContentPage
     {
-        public Transaccion()
+        public Transaccion(string marca, string modelo, string color, float montoCarro, float prima, int plazos, float tasaInteres, double mensualidad)
         {
             InitializeComponent();
             btnComprar.Clicked += BtnComprar_Clicked;
+            marcaSelected = marca;
+            modeloS = modelo;
+            colorS = color;
+            precioCarro = montoCarro;
+            primaCarro = prima;
+
+
         }
+
+        static string marcaSelected;
+        static string modeloS;
+        static string colorS;
+        static float precioCarro;
+        static float primaCarro;
+        static int cantidadPlazos;
+        static float tasaDeInteres;
+        static double mensualidadCarro;
+
 
         private void BtnComprar_Clicked(object sender, EventArgs e)
         {
