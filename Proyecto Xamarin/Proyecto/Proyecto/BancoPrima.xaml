@@ -9,24 +9,23 @@
 
             <!--<Image Source="FondoAutoFastAlterno.png" Aspect="AspectFit" />-->
 
-            <Image Grid.Column="0" Source="LogoAutoFast.png" WidthRequest="240" HeightRequest="240" Margin="0,50,0,0"/>
+            <Image Grid.Column="0" Source="Autofast_gris.png" WidthRequest="240" HeightRequest="240" Margin="0,50,0,0"/>
 
             <!-- Picker for the amount of car press porcentage -->
-
-            <Label Text="Seleción del Porcentaje de Prima" TextColor="Goldenrod" FontSize="25"/>
-
-            <Picker x:Name="porcentajePrima" Title="Procentaje de Prima">
-                <Picker.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>10%</x:String>
-                        <x:String>15%</x:String>
-                        <x:String>20%</x:String>
-                    </x:Array>
+            <Label Text="Seleción del Porcentaje de Prima" TextColor="OrangeRed" FontSize="25"/>
+            <Grid ColumnDefinitions="2" RowDefinitions="1">
+            <Picker Title="Procentaje de Prima" x:Name="porcentajePrima" >
+                 <Picker.ItemsSource>
+                     <x:Array Type="{x:Type x:String}">
+                         <x:String>10%</x:String>
+                         <x:String>15%</x:String>
+                         <x:String>20%</x:String>
+                     </x:Array>
                 </Picker.ItemsSource>
             </Picker>
-
-
             <Button Text="Calcular prima" x:Name="btnCalcular" FontSize="12"/>
+            </Grid>
+
             <Entry Text="Monto de la prima" IsEnabled="False"  x:Name="montoPrima"/>
 
 
@@ -34,7 +33,7 @@
 
             <!-- Picker for the bank and % of interest -->
 
-            <Label Text="Seleción del Banco" TextColor="Goldenrod" FontSize="25"/>
+            <Label Text="Seleción del Banco" TextColor="OrangeRed" FontSize="25"/>
 
             <Picker x:Name="Banco" Title="Bancos disponibles" HorizontalOptions="Center">
                 <Picker.ItemsSource>
@@ -58,6 +57,6 @@
             <Button Text="Calcular prima" x:Name="btnCalcularTasa" FontSize="12"/>
             <Entry Text="Tasa de intereses" IsEnabled="False" x:Name="EnTasa"/>
             <Entry Text="Cuota mensual" IsEnabled="False" x:Name="EnMontoMensual"/>
-        </StackLayout>
+         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -5,7 +5,8 @@
              NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Metodo de pago" FontSize="45" FontFamily="Arial" HorizontalTextAlignment="Center"/>
+            <Image Grid.Column="0" Source="Autofast_gris.png" WidthRequest="245" HeightRequest="245" Margin="0,50,0,0"/>
+            <Label Text="Metodo de pago" TextColor="OrangeRed" FontSize="45" FontFamily="Arial" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
             <Entry Keyboard="Numeric" Placeholder="Numero de telefono nacional"/>
             <Picker x:Name="pickerTipoTarjeta" Title="Tipos de tarjetas">
                 <Picker.ItemsSource>
@@ -19,7 +20,7 @@
 
             <Entry Placeholder="Titular de la tarjeta" x:Name="TitularTarjeta"/>
             <Entry Keyboard="Numeric" Placeholder="Numero de tarjeta" x:Name="numeroTarjeta"/>
-
+        
             <RelativeLayout HorizontalOptions="FillAndExpand">
                 <Picker Title="---" RelativeLayout.XConstraint="{ConstraintExpression 
             Type=RelativeToParent,Property=Width,Factor=.0000,Constant=0}"
@@ -75,11 +76,13 @@
 
             </RelativeLayout>
 
-            <RelativeLayout HorizontalOptions="FillAndExpand">
+            
+
+                <RelativeLayout HorizontalOptions="FillAndExpand">
                 <Button Text="Regresar" RelativeLayout.XConstraint="{ConstraintExpression 
-            Type=RelativeToParent,Property=Width,Factor=.0000,Constant=0}"
+            Type=RelativeToParent,Property=Width,Factor=.0000,Constant=0}" 
             RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
-            Property=Width,Factor=.3333,Constant=0}" x:Name="btnRegresarMenuModelos"/>
+            Property=Width,Factor=.3333,Constant=0}"  x:Name="btnRegresarMenuModelos"/>
                 <Button Text="Comprar" RelativeLayout.XConstraint="{ConstraintExpression
             Type=RelativeToParent,Property=Width,Factor=.3333,Constant=0}"
             RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
