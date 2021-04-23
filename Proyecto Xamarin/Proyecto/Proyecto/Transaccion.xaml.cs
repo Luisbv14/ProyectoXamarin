@@ -41,6 +41,7 @@ namespace Proyecto
             var tituTar = TitularTarjeta.Text;
             var numTar = numeroTarjeta.Text;
             var ccvTar = ccvEX.Text;
+            ((NavigationPage)this.Parent).PushAsync(new Menu());
 
         }
     }
