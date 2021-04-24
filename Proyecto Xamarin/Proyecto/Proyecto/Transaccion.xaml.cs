@@ -41,12 +41,34 @@ namespace Proyecto
 
         private void BtnComprar_Clicked(object sender, EventArgs e)
         {
-            var tipoTar = pickerTipoTarjeta.SelectedIndex.ToString();
+            var tempTipoTar = pickerTipoTarjeta.SelectedIndex;
+            var tipoTar = "";
+            switch(tempTipoTar)
+            {
+                case 1:
+                    tipoTar = "Americas Express";
+                    break;
+                case 2:
+                    tipoTar = "MasterCard";
+                    break;
+                case 3:
+                    tipoTar = "VISA";
+                    break;
+                default:
+                    DisplayAlert("ALERT", "error grave en tipoTar: " + tipoTar, "OK");
+                    break;
+            }
 
             DisplayAlert("ALERT", "tipoTar es: " + tipoTar, "OK");
 
             var tituTar = titularTarjeta.Text;
+
+            DisplayAlert("ALERT", "tituTar: " + tituTar, "OK");
+
             var numTar = numeroTarjeta.Text;
+
+            DisplayAlert("ALERT", "numTar: " + numTar, "OK");
+
             var ccvTar = ccvEX.Text;
 
             Proyecto.Model.Tarjetas resultado = new Proyecto.Model.Tarjetas();
@@ -73,15 +95,15 @@ namespace Proyecto
 
                 if (tipoTar != resultado.tipo)
                 {
-                    DisplayAlert("Advertencia", "Tipo de tarjeta incorrecto", "OK");
+                    DisplayAlert("Advertencia", "Tipo de tarjeta incorrecto, tipo: " + resultado.tipo, "OK");
                 } 
                 if (tituTar != resultado.Titular)
                 {
-                    DisplayAlert("Advertencia", "Titular incorrecto", "OK");
+                    DisplayAlert("Advertencia", "Titular incorrecto, titular: " + resultado.Titular, "OK");
                 }
                 if (ccvTar != resultado.ccv)
                 {
-                    DisplayAlert("Advertencia", "CCV incorrecto ", "OK");
+                    DisplayAlert("Advertencia", "CCV incorrecto, cvv: " + resultado.ccv, "OK");
                 }
 
                 var montoRebajado = resultado.monto - precioCarro;
