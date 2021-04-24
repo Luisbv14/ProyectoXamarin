@@ -36,7 +36,14 @@ namespace Proyecto
             mensualidadCarro = mensualidad;
             correoS = correo;
 
-            txtmarca.Text = marcaSelected.ToString();
+            txtmarca.Text = marcaSelected;
+            txtmodelo.Text = modeloS;
+            txtcolor.Text = colorS;
+            txtprecio.Text = precioCarro.ToString();
+            txtprima.Text = primaCarro.ToString();
+            txtplazos.Text = cantidadPlazos.ToString();
+            txtinteres.Text = tasaDeInteres.ToString();
+            txtmensual.Text = mensualidadCarro.ToString();
         }
 
         private void BtnComprar_Clicked(object sender, EventArgs e)
