@@ -9,7 +9,7 @@ namespace Proyecto.Model
     [Table("Ventas")]
     class Ventas
     {
-        [PrimaryKey, AutoIncrement]
+        [PrimaryKey]
         public int codigoVentas { get; set; }
 
         public float monto { get; set; }

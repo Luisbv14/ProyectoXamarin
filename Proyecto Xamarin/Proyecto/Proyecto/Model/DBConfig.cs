@@ -206,21 +206,21 @@ namespace Proyecto.Model
         // ******************************AGREGAR VENTA******************************
 
         public string EstadoMensajeVenta;
-        public int AgregarVenta(float monto, string correo, string marca, string modelo, string color)
+        public int AgregarVenta(int codigo, float monto, string correo, string marca, string modelo, string color)
         {
             int result = 0;
             try
             {
                 result = con.Insert(new Ventas
                 {
+                    codigoVentas = codigo,
                     monto = monto,
                     correo = correo,
                     marca = marca,
                     modelo = modelo,
                     color = color
-
                 });
-                return 1;
+                return result;
             }
             catch (Exception e)
             { EstadoMensajeVenta = e.Message; }

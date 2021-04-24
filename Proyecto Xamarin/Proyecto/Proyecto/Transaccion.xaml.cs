@@ -41,17 +41,18 @@ namespace Proyecto
 
         private void BtnComprar_Clicked(object sender, EventArgs e)
         {
-            var tempTipoTar = pickerTipoTarjeta.SelectedIndex;
+            var tempTipoTar = pickerTipoTarjeta.SelectedIndex.ToString();
             var tipoTar = "";
+
             switch(tempTipoTar)
             {
-                case 1:
-                    tipoTar = "Americas Express";
+                case "1":
+                    tipoTar = "American Express";
                     break;
-                case 2:
+                case "2":
                     tipoTar = "MasterCard";
                     break;
-                case 3:
+                case "3":
                     tipoTar = "VISA";
                     break;
                 default:
@@ -63,11 +64,7 @@ namespace Proyecto
 
             var tituTar = titularTarjeta.Text;
 
-            DisplayAlert("ALERT", "tituTar: " + tituTar, "OK");
-
             var numTar = numeroTarjeta.Text;
-
-            DisplayAlert("ALERT", "numTar: " + numTar, "OK");
 
             var ccvTar = ccvEX.Text;
 
@@ -115,9 +112,9 @@ namespace Proyecto
                     DisplayAlert("Advertencia", "No se logró realizar el update a la BD", "OK");
                 } else
                 {
-                    int resultadoVenta = DBConfig.Instancia.AgregarVenta(precioCarro, correoS, marcaSelected, modeloS, colorS);
+                    int resultadoVenta = DBConfig.Instancia.AgregarVenta(1, precioCarro, correoS, marcaSelected, modeloS, colorS);
                     DisplayAlert("Alert", "resultadoVenta: " + resultadoVenta, "Ok");
-                    if (resultadoVenta == 1)
+                    if (resultadoVenta != 0)
                     {
                         ((NavigationPage)this.Parent).PushAsync(new Factura(marcaSelected, modeloS, colorS, precioCarro, primaCarro, cantidadPlazos, tasaDeInteres, mensualidadCarro, correoS));
                     } else
