@@ -42,17 +42,20 @@ namespace Proyecto
         private void BtnComprar_Clicked(object sender, EventArgs e)
         {
             var tempTipoTar = pickerTipoTarjeta.SelectedIndex.ToString();
+
+            DisplayAlert("ALERT", "picketTarjeta: " + tempTipoTar, "OK");
+
             var tipoTar = "";
 
             switch(tempTipoTar)
             {
-                case "1":
+                case "0":
                     tipoTar = "American Express";
                     break;
-                case "2":
+                case "1":
                     tipoTar = "MasterCard";
                     break;
-                case "3":
+                case "2":
                     tipoTar = "VISA";
                     break;
                 default:
@@ -86,7 +89,7 @@ namespace Proyecto
                 }
                 catch (NotImplementedException f)
                 {
-                    DisplayAlert("Advertencia", "Usuario no encontrado", "OK");
+                    DisplayAlert("Advertencia", "Tarjeta no encontrado", "OK");
                     Console.WriteLine("Error en transaccion, GetTarjeta: " + f);
                 }
 
