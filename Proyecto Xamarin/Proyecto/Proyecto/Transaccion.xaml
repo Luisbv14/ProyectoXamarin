@@ -14,7 +14,7 @@
                     <x:Array Type="{x:Type x:String}">
                         <x:String>American Express</x:String>
                         <x:String>MasterCard</x:String>
-                        <x:String>Visa</x:String>
+                        <x:String>VISA</x:String>
                     </x:Array>
                 </Picker.ItemsSource>
             </Picker>
