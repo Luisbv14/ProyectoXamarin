@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proyecto.Factura">
+    <ContentPage.Content>
+            <ScrollView>
+                <StackLayout>
+                <Image Grid.Column="0" Source="Autofast_gris.png" WidthRequest="240" HeightRequest="240" Margin="0,50,0,0"/>
+                <Label Text="Gracias por comprar con nosotros!" TextColor="OrangeRed" FontSize="25"/>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Marca: " HorizontalOptions="Start"/>
+                    <Label Grid.Column="1"  Text="MARCA" x:Name="txtmarca" HorizontalOptions="End"/>
+                    <!--Aquí paso un NicoMomentoEstelar-->
+                    <Label Grid.Row="1"  Text="Modelo: " HorizontalOptions="Start"/>
+                    <Label Grid.Row="1" Grid.Column="1" Text="MODELO" x:Name="txtmodelo" HorizontalOptions="End"/>
+                    
+                    <Label Grid.Row="2"  Text="Color: " HorizontalOptions="Start"/>
+                    <Label Grid.Row="2" Grid.Column="1" Text="COLOR" x:Name="txtcolor" HorizontalOptions="End"/>
+                    
+                    <Label FontAttributes="Bold" Grid.Row="3"  Text="Precio Total: " HorizontalOptions="Start"/>
+                    <Label FontAttributes="Bold" Grid.Row="3" Grid.Column="1" Text="PRECIO" x:Name="txtprecio" HorizontalOptions="End"/>
+                    
+                    <Label Grid.Row="4"  Text="Prima: " HorizontalOptions="Start"/>
+                    <Label Grid.Row="4" Grid.Column="1" Text="PRIMA" x:Name="txtprima" HorizontalOptions="End"/>
+                    
+                    <Label Grid.Row="5"  Text="Cantidad de plazos (meses): " HorizontalOptions="Start"/>
+                    <Label Grid.Row="5" Grid.Column="1" Text="PLAZOS" x:Name="txtplazos" HorizontalOptions="End"/>
+                    
+                    <Label Grid.Row="6"  Text="Tasa de interés: " HorizontalOptions="Start"/>
+                    <Label Grid.Row="6" Grid.Column="1" Text="INTERES" x:Name="txtinteres" HorizontalOptions="End"/>
+                    
+                    <Label FontAttributes="Bold" Grid.Row="7"  Text="Precio mensual: " HorizontalOptions="Start"/>
+                    <Label FontAttributes="Bold" Grid.Row="7" Grid.Column="1" Text="PORFAVORSIRVE" x:Name="txtmensual" HorizontalOptions="End"/>
+                </Grid>
+                <Button x:Name="btnVolver" Text ="Volver" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

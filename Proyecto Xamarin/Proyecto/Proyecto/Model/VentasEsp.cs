@@ -19,6 +19,5 @@ namespace Proyecto.Model
 
         [MaxLength(50), NotNull]
         public String codigoProducto { get; set; }
-
     }
 }

@@ -18,14 +18,14 @@ namespace Proyecto
             InitializeComponent();
             btnLogin.Clicked += BtnLogin_Clicked;
             btnRegistrar.Clicked += BtnRegistrar_Clicked;
-            btnVerBD.Clicked += BtnVerBD_Clicked;
+            //btnVerBD.Clicked += BtnVerBD_Clicked;
         }
 
         private void BtnVerBD_Clicked(object sender, EventArgs e)
         {
-            ((NavigationPage)this.Parent).PushAsync(new BancoPrima());
+            ((NavigationPage)this.Parent).PushAsync(new BD());
         }
-
+        
         private void BtnRegistrar_Clicked(object sender, EventArgs e)
         {
             ((NavigationPage)this.Parent).PushAsync(new Registro());
@@ -45,24 +45,26 @@ namespace Proyecto
                 try
                 {
                     resultado = DBConfig.Instancia.GetUser(usr.Text);
-                } catch(Exception f)
+
+                    if(resultado == null)
+                    {
+                        throw new NotImplementedException();
+                    }
+                } catch(NotImplementedException f)
                 {
-                    DisplayAlert("Advertencia", "Hubo un error", "OK");
+                    DisplayAlert("Advertencia", "Usuario no encontrado", "OK");
                     Console.WriteLine("Error en login: " + f);
                 }
 
                 //lbl_resultado.Text = "usuario: " + resultado.username + ", contraseña: " + resultado.contraseña;
                 if (resultado.contraseña == psw.Text)
                 {
-                    ((NavigationPage)this.Parent).PushAsync(new Menu());
+                    ((NavigationPage)this.Parent).PushAsync(new Menu(resultado.correo));
                 } else
                 {
                     DisplayAlert("Advertencia", "Las contraseñas es incorrecta", "OK");
                 }
             }
-
-
-
 
             /*if (!(App.listaUsuarios.Find(i => i.username == usr.Text) == null && App.listaUsuarios.Find(i => i.contraseña == psw.Text) == null))
             {
@@ -127,8 +129,6 @@ namespace Proyecto
                 ((NavigationPage)this.Parent).PushAsync(new Menu());
             }
         */
-
-
 
     }
 }

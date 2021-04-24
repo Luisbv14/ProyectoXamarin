@@ -12,7 +12,7 @@ namespace Proyecto
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MenuModelos : ContentPage
     {
-        public MenuModelos(string marca, Uri url1, Uri url2, Uri url3)
+        public MenuModelos(string marca, Uri url1, Uri url2, Uri url3, String correo)
         {
             InitializeComponent();
             BtnOpcion1.Clicked += BtnOpcion1_Clicked;
@@ -23,12 +23,14 @@ namespace Proyecto
             BtnOpcion1.ImageSource = ImageSource.FromUri(url1);
             BtnOpcion2.ImageSource = ImageSource.FromUri(url2);
             BtnOpcion3.ImageSource = ImageSource.FromUri(url3);
+            correoS = correo;
         }
         public static string marcaSelect;
         public static string modeloSeleccionado;
         public static Uri color1;
         public static Uri color2;
         public static Uri color3;
+        public String correoS;
 
 
 
@@ -73,7 +75,7 @@ namespace Proyecto
                 color3 = new Uri("");
             }
 
-            ((NavigationPage)this.Parent).PushAsync(new ModeloSeleccion(marcaSelect,modeloSeleccionado, color1, color2, color3));
+            ((NavigationPage)this.Parent).PushAsync(new ModeloSeleccion(marcaSelect,modeloSeleccionado, color1, color2, color3, correoS));
         }
 
         private void BtnOpcion2_Clicked(object sender, EventArgs e)
@@ -120,7 +122,7 @@ namespace Proyecto
                 color2 = new Uri("https://cdn.discordapp.com/attachments/730938576560193607/833859183367553054/YarisDarkBlueMicaMetallic.png");
                 color3 = new Uri("https://cdn.discordapp.com/attachments/730938576560193607/833859181781843978/ToyotaYarisBlackMicaInk.png");
             }
-           ((NavigationPage)this.Parent).PushAsync(new ModeloSeleccion(marcaSelect, modeloSeleccionado, color1, color2, color3));
+           ((NavigationPage)this.Parent).PushAsync(new ModeloSeleccion(marcaSelect, modeloSeleccionado, color1, color2, color3, correoS));
         }
         private void BtnOpcion3_Clicked(object sender, EventArgs e)
         {
@@ -166,7 +168,7 @@ namespace Proyecto
                 color2 = new Uri("https://cdn.discordapp.com/attachments/730938576560193607/833859186622332928/AGYARojo.png");
                 color3 = new Uri("https://cdn.discordapp.com/attachments/730938576560193607/833859185866833940/AGYANaranja.png");
             }
-            ((NavigationPage)this.Parent).PushAsync(new ModeloSeleccion(marcaSelect, modeloSeleccionado, color1, color2, color3));
+            ((NavigationPage)this.Parent).PushAsync(new ModeloSeleccion(marcaSelect, modeloSeleccionado, color1, color2, color3, correoS));
         }
     }
 }

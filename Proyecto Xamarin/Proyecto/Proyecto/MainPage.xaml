@@ -10,5 +10,4 @@
         <Image Source="AutoFastCoralBack.png"/>
         <Button Text="Bienvenido" x:Name="BtnBienvenida" CornerRadius="60"/>
     </StackLayout>
-
 </ContentPage>

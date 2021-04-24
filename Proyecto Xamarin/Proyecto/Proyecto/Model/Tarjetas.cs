@@ -11,17 +11,15 @@ namespace Proyecto.Model
         [PrimaryKey, MaxLength(50)]
         public String numTarjeta { get; set; }
 
-        [MaxLength(50), NotNull, Unique]
+        [MaxLength(50), Unique]
         public String ccv { get; set; }
 
-        [MaxLength(50), NotNull]
+        [MaxLength(50)]
         public String Titular { get; set; }
 
-        [MaxLength(50), NotNull]
+        [MaxLength(50)]
         public String tipo { get; set; }
-/*
-        [NotNull]
+
         public float monto { get; set; }
-*/
     }
 }

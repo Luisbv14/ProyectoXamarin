@@ -12,7 +12,7 @@ namespace Proyecto
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ModeloSeleccion : ContentPage
     {
-        public ModeloSeleccion(string marca, string modelo, Uri color1, Uri color2, Uri color3)
+        public ModeloSeleccion(string marca, string modelo, Uri color1, Uri color2, Uri color3, String correo)
         {
             InitializeComponent();
             marcaSeleccionada = marca;
@@ -31,7 +31,7 @@ namespace Proyecto
             btnContinuePay.Clicked += BtnContinuePay_Clicked;
             verificacionColor(modelo);
             Pruebacolores.Text = colorSeleccionado;
-
+            correoS = correo;
 
         }
         static string marcaSeleccionada;
@@ -40,10 +40,11 @@ namespace Proyecto
         static Uri imgcolor2;
         static Uri imgcolor3;
         static string colorSeleccionado;
+        public String correoS;
 
         private void BtnContinuePay_Clicked(object sender, EventArgs e)
         {
-            ((NavigationPage)this.Parent).PushAsync(new BancoPrima(marcaSeleccionada, modeloSeleccionado, colorSeleccionado));
+            ((NavigationPage)this.Parent).PushAsync(new BancoPrima(marcaSeleccionada, modeloSeleccionado, colorSeleccionado, correoS));
         }
 
         private void BtnColor1_Clicked(object sender, EventArgs e)

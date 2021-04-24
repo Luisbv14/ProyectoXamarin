@@ -12,10 +12,18 @@ namespace Proyecto.Model
         [PrimaryKey, AutoIncrement]
         public int codigoVentas { get; set; }
 
-        [NotNull]
-        public int monto { get; set; }
+        public float monto { get; set; }
 
-        [MaxLength(50), NotNull]
-        public String cedula { get; set; }
+        [MaxLength(50)]
+        public String correo { get; set; }
+
+        [MaxLength(50)]
+        public String marca { get; set; }
+        
+        [MaxLength(50)]
+        public String modelo { get; set; }
+
+        [MaxLength(50)]
+        public String color { get; set; }
     }
 }

@@ -46,7 +46,7 @@ namespace Proyecto.Model
         // ******************************CREAR USUARIO******************************
 
         public string EstadoMensajeUsuario;
-        public int AddNewUser(string username, string contraseña, string correo, float deuda)
+        public int AddNewUser(string username, string contraseña, string correo)
         {
             int result = 0;
             try
@@ -108,7 +108,7 @@ namespace Proyecto.Model
                     ccv = ccv,
                     Titular = Titular,
                     tipo = tipo,
-                    /*monto = monto*/
+                    monto = monto
                 });
                 EstadoMensajeTarjeta = string.Format("Cantidad filas : {0}", result);
             }
@@ -127,6 +127,41 @@ namespace Proyecto.Model
                 EstadoMensajeTarjeta = e.Message;
             }
             return Enumerable.Empty<Tarjetas>();
+        }
+
+        public Tarjetas GetTarjeta(String numTarjeta)
+        {
+            try
+            {
+                return con.Table<Tarjetas>().FirstOrDefault(item => item.numTarjeta == numTarjeta);
+            }
+            catch (Exception e)
+            {
+                EstadoMensajeTarjeta = e.Message;
+            }
+            return null;
+        }
+
+        public int UpdateTarjeta(String numTarjeta, float monto)
+        {
+            
+            try
+            {
+                var data = con.Table<Tarjetas>();
+                var d1 = (from values in data
+                        where values.numTarjeta == numTarjeta
+                        select values).Single();
+                if (true)
+                {
+                    d1.monto = monto;
+                    con.Update(d1);
+                    return 1;
+                }
+              
+            } catch(Exception f)
+            {
+                return 0;
+            }
         }
 
         // ******************************AGREGAR PRODUCTO******************************
@@ -171,16 +206,18 @@ namespace Proyecto.Model
         // ******************************AGREGAR VENTA******************************
 
         public string EstadoMensajeVenta;
-        public int AgregarVenta(int codigoVentas, int monto, string cedula)
+        public int AgregarVenta(float monto, string correo, string marca, string modelo, string color)
         {
             int result = 0;
             try
             {
                 result = con.Insert(new Ventas
                 {
-                    codigoVentas = codigoVentas,
                     monto = monto,
-                    cedula = cedula,
+                    correo = correo,
+                    marca = marca,
+                    modelo = modelo,
+                    color = color
 
                 });
                 EstadoMensajeVenta = string.Format("Cantidad filas : {0}", result);
@@ -201,6 +238,8 @@ namespace Proyecto.Model
             }
             return Enumerable.Empty<Ventas>();
         }
+
+        
 
         // ******************************AGREGAR VENTAS ESPECIFICAS******************************
 

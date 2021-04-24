@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Proyecto.Transaccion"
              NavigationPage.HasNavigationBar="False"
-             BackgroundColor="#2F2F2F">
+             BackgroundColor="LightGray">
     <ContentPage.Content>
         <StackLayout>
             <Image Grid.Column="0" Source="Autofast_gris.png" WidthRequest="245" HeightRequest="245" Margin="0,50,0,0"/>
@@ -19,7 +19,7 @@
                 </Picker.ItemsSource>
             </Picker>
 
-            <Entry TextColor="OrangeRed" Placeholder="Titular de la tarjeta" x:Name="TitularTarjeta"/>
+            <Entry TextColor="OrangeRed" Placeholder="Titular de la tarjeta" x:Name="titularTarjeta"/>
             <Entry TextColor="OrangeRed" Keyboard="Numeric" Placeholder="Numero de tarjeta" x:Name="numeroTarjeta"/>
 
             <RelativeLayout HorizontalOptions="FillAndExpand">
@@ -50,7 +50,6 @@
             Property=Width,Factor=.3333,Constant=0}" x:Name="YearEX">
                     <Picker.ItemsSource>
                         <x:Array Type="{x:Type x:String}">
-                            <x:String>2021</x:String>
                             <x:String>2022</x:String>
                             <x:String>2023</x:String>
                             <x:String>2024</x:String>
