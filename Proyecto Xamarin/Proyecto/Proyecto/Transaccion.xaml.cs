@@ -42,6 +42,9 @@ namespace Proyecto
         private void BtnComprar_Clicked(object sender, EventArgs e)
         {
             var tipoTar = pickerTipoTarjeta.SelectedIndex.ToString();
+
+            DisplayAlert("ALERT", "tipoTar es: " + tipoTar, "OK");
+
             var tituTar = titularTarjeta.Text;
             var numTar = numeroTarjeta.Text;
             var ccvTar = ccvEX.Text;
@@ -70,7 +73,7 @@ namespace Proyecto
 
                 if (tipoTar != resultado.tipo)
                 {
-                    DisplayAlert("Advertencia", "Tipo incorrecto", "OK");
+                    DisplayAlert("Advertencia", "Tipo de tarjeta incorrecto", "OK");
                 } 
                 if (tituTar != resultado.Titular)
                 {
@@ -90,7 +93,9 @@ namespace Proyecto
                     DisplayAlert("Advertencia", "No se logró realizar el update a la BD", "OK");
                 } else
                 {
-                    if (DBConfig.Instancia.AgregarVenta(precioCarro, correoS, marcaSelected, modeloS, colorS) != 0)
+                    int resultadoVenta = DBConfig.Instancia.AgregarVenta(precioCarro, correoS, marcaSelected, modeloS, colorS);
+                    DisplayAlert("Alert", "resultadoVenta: " + resultadoVenta, "Ok");
+                    if (resultadoVenta == 1)
                     {
                         ((NavigationPage)this.Parent).PushAsync(new Factura(marcaSelected, modeloS, colorS, precioCarro, primaCarro, cantidadPlazos, tasaDeInteres, mensualidadCarro, correoS));
                     } else

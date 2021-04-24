@@ -45,11 +45,11 @@ namespace Proyecto
 
         public void llenarTarjetas()
         {
-            DBConfig.Instancia.AgregarTarjeta("5397237858238569", "755", "Nicole Valeria Rodríguez Guerrero", "MasterCard", 100000000);
+            DBConfig.Instancia.AgregarTarjeta("5397237858238569", "755", "Nicole Valeria Rodriguez Guerrero", "MasterCard", 100000000);
             DBConfig.Instancia.AgregarTarjeta("4645514457901786", "748", "Luis Enrique Brenes Valverde", "VISA", 100000000);
             DBConfig.Instancia.AgregarTarjeta("5305181663268265", "608", "Jean Franco Amaya Siso", "MasterCard", 100000000);
             DBConfig.Instancia.AgregarTarjeta("340859458221627", "910", "Jose Pablo Fonseca Rojas", "American Express", 100000000);
-            DBConfig.Instancia.AgregarTarjeta("4992459335963252", "248", "Sebastián Quiroga Alfaro", "VISA", 100000000);
+            DBConfig.Instancia.AgregarTarjeta("4992459335963252", "248", "Sebastian Quiroga Alfaro", "VISA", 100000000);
         }
     }
 }

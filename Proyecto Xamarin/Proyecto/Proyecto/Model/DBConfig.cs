@@ -220,7 +220,7 @@ namespace Proyecto.Model
                     color = color
 
                 });
-                EstadoMensajeVenta = string.Format("Cantidad filas : {0}", result);
+                return 1;
             }
             catch (Exception e)
             { EstadoMensajeVenta = e.Message; }
