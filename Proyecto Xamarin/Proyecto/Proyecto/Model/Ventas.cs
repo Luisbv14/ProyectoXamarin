@@ -9,9 +9,6 @@ namespace Proyecto.Model
     [Table("Ventas")]
     class Ventas
     {
-        [PrimaryKey]
-        public int codigoVentas { get; set; }
-
         public float monto { get; set; }
 
         [MaxLength(50)]

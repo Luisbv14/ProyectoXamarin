@@ -21,9 +21,10 @@
                     <Button BackgroundColor="White" Grid.Column="2" HorizontalOptions="FillAndExpand"   x:Name="btnColor3"/>
                 
                 </Grid>
-                <Label x:Name="Pruebacolores"/>
+                <!--
+                <Label x:Name="Pruebacolores"/> -->
                 <Button Text="Continuar a pagar" Margin="0,60,0,0" BackgroundColor="#ff5757" HeightRequest="50" TextColor="White" x:Name="btnContinuePay"/>
-
+                
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

@@ -30,7 +30,6 @@ namespace Proyecto
             btnColor3.Clicked += BtnColor3_Clicked;
             btnContinuePay.Clicked += BtnContinuePay_Clicked;
             verificacionColor(modelo);
-            Pruebacolores.Text = colorSeleccionado;
             correoS = correo;
 
         }
@@ -51,20 +50,17 @@ namespace Proyecto
         {
             imgGrande.Source = imgcolor1;
             verificacionColor(modeloSeleccionado);
-            Pruebacolores.Text = colorSeleccionado;
         }
 
         private void BtnColor2_Clicked(object sender, EventArgs e)
         {
             imgGrande.Source = imgcolor2;
             verificacionColor2(modeloSeleccionado);
-            Pruebacolores.Text = colorSeleccionado;
         }
         private void BtnColor3_Clicked(object sender, EventArgs e)
         {
             imgGrande.Source = imgcolor3;
             verificacionColor3(modeloSeleccionado);
-            Pruebacolores.Text = colorSeleccionado;
         }
 
         private void verificacionColor(string modeloSelected)

@@ -79,10 +79,6 @@
 
 
             <RelativeLayout HorizontalOptions="FillAndExpand">
-                <Button CornerRadius="20" BackgroundColor="Goldenrod" Text="Regresar" RelativeLayout.XConstraint="{ConstraintExpression 
-            Type=RelativeToParent,Property=Width,Factor=.0000,Constant=0}" 
-            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
-            Property=Width,Factor=.3333,Constant=0}"  x:Name="btnRegresarMenuModelos"/>
                 <Button CornerRadius="20" BackgroundColor="Goldenrod" Text="Comprar" RelativeLayout.XConstraint="{ConstraintExpression
             Type=RelativeToParent,Property=Width,Factor=.3333,Constant=0}"
             RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,

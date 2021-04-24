@@ -21,6 +21,7 @@ namespace Proyecto
             //btnVerBD.Clicked += BtnVerBD_Clicked;
         }
 
+        
         private void BtnVerBD_Clicked(object sender, EventArgs e)
         {
             ((NavigationPage)this.Parent).PushAsync(new BD());

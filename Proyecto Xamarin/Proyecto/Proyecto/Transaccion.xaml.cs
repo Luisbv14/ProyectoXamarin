@@ -43,8 +43,6 @@ namespace Proyecto
         {
             var tempTipoTar = pickerTipoTarjeta.SelectedIndex.ToString();
 
-            DisplayAlert("ALERT", "picketTarjeta: " + tempTipoTar, "OK");
-
             var tipoTar = "";
 
             switch(tempTipoTar)
@@ -63,7 +61,6 @@ namespace Proyecto
                     break;
             }
 
-            DisplayAlert("ALERT", "tipoTar es: " + tipoTar, "OK");
 
             var tituTar = titularTarjeta.Text;
 
@@ -115,7 +112,7 @@ namespace Proyecto
                     DisplayAlert("Advertencia", "No se logró realizar el update a la BD", "OK");
                 } else
                 {
-                    int resultadoVenta = DBConfig.Instancia.AgregarVenta(1, precioCarro, correoS, marcaSelected, modeloS, colorS);
+                    int resultadoVenta = DBConfig.Instancia.AgregarVenta(precioCarro, correoS, marcaSelected, modeloS, colorS);
                     DisplayAlert("Alert", "resultadoVenta: " + resultadoVenta, "Ok");
                     if (resultadoVenta != 0)
                     {
